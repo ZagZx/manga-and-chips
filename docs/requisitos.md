@@ -22,6 +22,12 @@ Site para ler mangás, podendo adiciona-los a uma biblioteca para acompanhar o m
 
 - RF07: Usuário poderá remover mangás da sua biblioteca. (DELETE)
 
+### Pesquisa
+
+- RF08: Possibilidade pesquisar os mangás por nome.
+
+- RF09: Possibilidade de pesquisar os mangás por categoria, em uma página onde os mangás são ordenados por ordem alfabética e pode-se selecionar uma letra para exibir apenas os mangás que comecem com aquela letra. 
+
 # Requisitos não funcionais
 
 ### Backend
@@ -32,26 +38,28 @@ Site para ler mangás, podendo adiciona-los a uma biblioteca para acompanhar o m
 
 - RNF03: SQLite para o gerenciamento do banco de dados de usuários e dados do recurso.
 
+- RNF04: API do MangaDex para download de páginas do mangá, pesquisa, capas, etc.
+
 ### Frontend
 
-- RNF04: HTML, CSS e Javascript.
+- RNF05: HTML, CSS e Javascript.
 
-- RNF05: Framework Tailwind ou Boostrap para facilitar o desenvolvimento da interface.
+- RNF06: Framework Tailwind ou Boostrap para facilitar o desenvolvimento da interface.
 
 ### Banco de Dados
 
-- RNF06: Linguagem MySQL.
+- RNF07: Linguagem MySQL.
 
 ### Templates
 
-- RNF07: Uso de extends/includes para layout e mensagens de erro.
+- RNF08: Uso de extends/includes para layout e mensagens de erro.
 
-- RNF08: Páginas de erro personalizadas.
+- RNF09: Páginas de erro personalizadas.
 
 ### Documentações e instruções
 
-- RNF09: Código versionado no GitHub com entregas semanais.
+- RNF10: Código versionado no GitHub com entregas semanais.
 
-- RNF10: Modelo conceitual e/ou lógico do banco de dados.
+- RNF11: Modelo conceitual e/ou lógico do banco de dados.
 
-- RNF11: README com instruções.
+- RNF12: README com instruções.
