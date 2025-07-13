@@ -3,8 +3,8 @@
 - Criação do repositório no GitHub ✅
 - Escolha do tema do sistema ✅
 - Documento de Requisitos Funcionais completo no repositório ✅
-- Estrutura inicial do projeto (ambiente virtual, app.py, requirements.txt)
-- Configuração inicial do banco SQLite (tabela de usuários)
+- Estrutura inicial do projeto (ambiente virtual, app.py, requirements.txt) ✅
+- Configuração inicial do banco SQLite (tabela de usuários) ✅
 
 ### Semana 2 (11/07–17/07)
 
