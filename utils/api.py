@@ -25,9 +25,11 @@ class Manga:
     @property
     def cover_id(self) -> Union[str, None]:
         if not self._cover_id:
-            try:          
+            try:
+                if not self.manga_data:
+                    raise Exception('Não foi possível obter manga_data')
                 # vai pegar a primeira cover art que encontrar, tem alguma cover que seja melhor que outra?
-                for relation in self.manga_data['relationships']: 
+                for relation in self._manga_data['relationships']: 
                     if relation['type'] == 'cover_art':
                         self._cover_id = relation['id']
                         break
@@ -40,10 +42,12 @@ class Manga:
 
     @property
     def cover_filename(self) -> Union[str, None]: # tenta fazer requisição com o cover id nulo no request
-        if not self._cover_id:
+        if not self._cover_filename:
             try:
-                response = requests.get(f'{self.BASE_URL}/cover/{self.cover_id}')
-                self._cover_filename = response['data']['filename']
+                if not self.cover_id:
+                    raise Exception('Não foi possível obter o cover_id')
+                response = requests.get(f'{self.BASE_URL}/cover/{self._cover_id}')
+                self._cover_filename = response.json()['data']['attributes']['fileName']
             except Exception as e:
                 print(f'Erro ao buscar o filename da cover: {e}')
         return self._cover_filename
@@ -55,9 +59,8 @@ class Manga:
             self._cover_image = response.content
         except Exception as e:
             print(f'Erro ao buscar a imagem da cover_art: {e}')
-
         return None
     
 if __name__ == '__main__':
     jojo = Manga('1044287a-73df-48d0-b0b2-5327f32dd651')
-    print(jojo.cover_image)
+    print(jojo.cover_filename)
