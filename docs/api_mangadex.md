@@ -22,11 +22,11 @@ Busca informações do Cover.
 - **baseURL:** api.mangadex.org
 - **endpoint:** /cover/{cover_id}
 
-**Retorna:** Nome do arquivo jpg da cover {cover_jpg}
+**Retorna:** Nome do arquivo jpg da cover {cover_filename}
 
 ## Cover Image
 Exibe a imagem da capa.
 - **baseURL:** uploads.mangadex.org
-- **endpoint:** /covers/{manga_id}/{cover_jpg}
+- **endpoint:** /covers/{manga_id}/{cover_filename}
 
 **Retorna:** Imagem da capa do mangá
