@@ -7,15 +7,17 @@ class Manga:
 
     def __init__(self, manga_id:str):
         self.manga_id = manga_id
-        self._cover_id = None
         self._manga_data = None
+        self._cover_id = None
+        self._cover_filename = None
+        self._cover_image = None
 
     @property
     def manga_data(self) -> Union[dict, None]:
         if not self._manga_data:
             try:
-                self._manga_data = requests.get(f'{self.BASE_URL}/manga/{self.manga_id}')
-                self._manga_data = self._manga_data.json()['data']
+                response = requests.get(f'{self.BASE_URL}/manga/{self.manga_id}')
+                self._manga_data = response.json()['data']
             except Exception as e:
                 print(f'Erro ao buscar os dados do mangá: {e}')
         return self._manga_data
@@ -23,10 +25,12 @@ class Manga:
     @property
     def cover_id(self) -> Union[str, None]:
         if not self._cover_id:
-            try:
-                for relation in self.manga_data['relationships']:
+            try:          
+                # vai pegar a primeira cover art que encontrar, tem alguma cover que seja melhor que outra?
+                for relation in self.manga_data['relationships']: 
                     if relation['type'] == 'cover_art':
                         self._cover_id = relation['id']
+                        break
 
                 if not self._cover_id:
                     raise Exception('id não encontrado')
@@ -34,10 +38,26 @@ class Manga:
                 print(f'Erro ao buscar id da cover: {e}')
         return self._cover_id
 
-    def get_cover_image(self):
-        pass
+    @property
+    def cover_filename(self) -> Union[str, None]: # tenta fazer requisição com o cover id nulo no request
+        if not self._cover_id:
+            try:
+                response = requests.get(f'{self.BASE_URL}/cover/{self.cover_id}')
+                self._cover_filename = response['data']['filename']
+            except Exception as e:
+                print(f'Erro ao buscar o filename da cover: {e}')
+        return self._cover_filename
+    
+    @property
+    def cover_image(self) -> Union[bytes, None]: # tenta fazer requisição com cover_filename nulo no request
+        try:
+            response = requests.get(f'{self.BASE_UPLOADS_URL}/covers/{self.manga_id}/{self.cover_filename}')
+            self._cover_image = response.content
+        except Exception as e:
+            print(f'Erro ao buscar a imagem da cover_art: {e}')
 
+        return None
+    
 if __name__ == '__main__':
     jojo = Manga('1044287a-73df-48d0-b0b2-5327f32dd651')
-
-    print(jojo.cover_id)
+    print(jojo.cover_image)
