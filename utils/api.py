@@ -54,15 +54,15 @@ class Manga:
     
     @property
     def cover_image(self) -> Union[bytes, None]:
-        try:
-            if not self.cover_filename:
-                raise Exception('Não foi possível obter o cover_filename')
-            response = requests.get(f'{self.BASE_UPLOADS_URL}/covers/{self.manga_id}/{self.cover_filename}', timeout=0)
-            self._cover_image = response.content
-        except Exception as e:
-            print(f'Erro ao buscar a imagem da cover_art: {e}')
-        return None
-    
+        if not self._cover_image:
+            try:
+                if not self.cover_filename:
+                    raise Exception('Não foi possível obter o cover_filename')
+                response = requests.get(f'{self.BASE_UPLOADS_URL}/covers/{self.manga_id}/{self.cover_filename}')
+                self._cover_image = response.content
+            except Exception as e:
+                print(f'Erro ao buscar a imagem da cover_art: {e}')
+        return self._cover_image    
 if __name__ == '__main__':
     jojo = Manga('1044287a-73df-48d0-b0b2-5327f32dd651')
     print(jojo.cover_image)
