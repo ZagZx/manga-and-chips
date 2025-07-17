@@ -6,10 +6,10 @@ from dotenv import load_dotenv
 from os import getenv
 import requests
 
-# load_dotenv('./.env')
+load_dotenv('./.env')
 
 app = Flask(__name__)
-# app.secret_key = getenv('SECRET_KEY')
+app.secret_key = getenv('SECRET_KEY')
 
 @app.route('/')
 def index():
@@ -22,6 +22,16 @@ def index():
     # request = requests.get(url,headers=headers)
     # Response(request.content, content_type=request.headers['Content-Type'])
     return render_template('index.html')
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        
+
+    return render_template('register.html')
 
 @app.route('/cover-proxy')
 def cover_proxy():
