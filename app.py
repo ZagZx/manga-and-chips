@@ -3,24 +3,28 @@ from flask_login import login_user,logout_user,current_user,UserMixin
 from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 
-from os import getenv
+import os
 import requests
+
+from database import Database
+
+DB_PATH = './database/database.db'
+SQL_PATH = './database/schema.sql'
+
+db = Database(DB_PATH)
+
+DROPAR_TABELAS = False
+# evitar drop das tabelas toda vez que rodar o codigo
+if not os.path.exists(DB_PATH) or DROPAR_TABELAS:
+    db.run_sql_file(SQL_PATH) # cria as tabelas | COLOCAR ISSO NO build.py DEPOIS
 
 load_dotenv('./.env')
 
 app = Flask(__name__)
-app.secret_key = getenv('SECRET_KEY')
+app.secret_key = os.getenv('SECRET_KEY')
 
 @app.route('/')
 def index():
-    # manga_id = '1044287a-73df-48d0-b0b2-5327f32dd651'
-    # filename = 'e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg'
-    
-    
-    # headers = {'Referer':'https://mangadex.org'}
-
-    # request = requests.get(url,headers=headers)
-    # Response(request.content, content_type=request.headers['Content-Type'])
     return render_template('index.html')
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -29,7 +33,7 @@ def register():
         username = request.form.get('username')
         email = request.form.get('email')
         password = request.form.get('password')
-        
+        # falta implementar, mas antes terminar a classe Database
 
     return render_template('register.html')
 
@@ -39,9 +43,7 @@ def cover_proxy():
     filename = request.args.get('filename')
 
     if filename and manga_id:
-
         url = f'https://uploads.mangadex.org/covers/{manga_id}/{filename}'
         response = requests.get(url)
 
         return response.content
-    
