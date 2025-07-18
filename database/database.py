@@ -1,6 +1,6 @@
 import sqlite3
 from werkzeug.security import check_password_hash, generate_password_hash
-from query import insert, select
+from .query import insert, select
 from typing import Union, Any
 
 class Database:
