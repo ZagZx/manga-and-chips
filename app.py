@@ -27,12 +27,17 @@ app.secret_key = os.getenv('SECRET_KEY')
 def index():
     return render_template('index.html')
 
-@app.route('/register', methods=['GET', 'POST'])
+@app.route('/cadastro', methods=['GET', 'POST'])
 def register():
     if request.method == 'POST':
         username = request.form.get('username')
         email = request.form.get('email')
         password = request.form.get('password')
+
+        if not db.run_query(f"SELECT * FROM users WHERE email = '{email}'"):
+            db.add_user(username, email, password)
+        else: 
+            print('Já existe um usuário cadastrado com esse email')
         # falta implementar, mas antes terminar a classe Database
 
     return render_template('register.html')
