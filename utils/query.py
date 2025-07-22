@@ -1,3 +1,9 @@
+'''
+Funções que retornam uma string formatada com parâmetros para serem utilizados no SQLite
+
+Isso vai mesmo ser utilizado??
+'''
+
 from typing import Union
 
 def insert(table: str, rows: Union[tuple[str], list[str], str]) -> str:
@@ -18,7 +24,6 @@ def insert(table: str, rows: Union[tuple[str], list[str], str]) -> str:
         
     return f'INSERT INTO {table}({rows}) VALUES ({placeholders})'
 
-
 def select(table: str, rows: Union[tuple[str], list[str], str] = "*") -> str:
     '''
     Formata uma string para um SELECT SQL.
@@ -35,9 +40,6 @@ def select(table: str, rows: Union[tuple[str], list[str], str] = "*") -> str:
         rows = ', '.join(rows)
         
     return f'SELECT {rows} FROM {table}'
-
-
-
 
 if __name__ == '__main__':
     print()
