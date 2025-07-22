@@ -29,9 +29,9 @@ login_manager.login_view = 'login'
 
 @login_manager.user_loader
 def load_user(user_id):
-    user_data = db.run_query('SELECT id, username, email, password_hash FROM users WHERE id = ?', user_id)[0]
+    user_data = db.run_query('SELECT id, username, email FROM users WHERE id = ?', user_id)[0]
     if user_data:
-        return User(id=user_data[0], username=user_data[1], email=user_data[2], password_hash=user_data[3])
+        return User(id=user_data[0], username=user_data[1], email=user_data[2])
     return None
 
 @app.route('/')
@@ -64,7 +64,7 @@ def login():
         user_data = db.run_query('SELECT id, username, password_hash FROM users WHERE email = ?', (email,))[0]
         print(user_data[0])
         if user_data and check_password_hash(user_data[2], password):
-            user = User(id=user_data[0], username=user_data[1], email=email, password_hash=user_data[2])
+            user = User(id=user_data[0], username=user_data[1], email=email)
             login_user(user)
             return redirect(url_for('index'))
         else:
