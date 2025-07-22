@@ -1,7 +1,9 @@
 import sqlite3
+from typing import Union, Any
+
+
 # from werkzeug.security import check_password_hash, generate_password_hash
 # from .query import insert, select
-from typing import Union, Any
 
 class Database:
     def __init__(self, db_path:str) -> None:
@@ -20,7 +22,7 @@ class Database:
             try: 
                 self._connection = sqlite3.connect(self.db_path)
             except Exception as e:
-                print(e)
+                print(f'Erro ao obter conexão: {e}')
         return self._connection
     
     def is_open(self) -> bool: 
@@ -50,9 +52,13 @@ class Database:
         return result
 
     def run_sql_file(self, sql_path:str): # fazer doc
-        with open(sql_path) as fr:
-            self.connection.executescript(fr.read())
-            self.connection.close()
+        try:
+            with open(sql_path) as fr:
+                self.connection.executescript(fr.read())
+                self.connection.close()
+        except Exception as e:
+            print(f'Erro ao rodar arquivo SQL: {e}')
+
 
 if __name__ == '__main__':
     db = Database('./database/database.db')
