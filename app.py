@@ -63,13 +63,17 @@ def login():
         password = request.form.get('password')
 
         user_data = db.run_query('SELECT id, username, password_hash FROM users WHERE email = ?', (email,))
-        if user_data and check_password_hash(user_data[2], password):
+        if user_data:
             user_data = user_data[0]
-            user = User(id=user_data[0], username=user_data[1], email=email)
-            login_user(user)
-            return redirect(url_for('index'))
-        else:
-            return render_template('login.html') # colocar mensagem de erro
+            if check_password_hash(user_data[2], password):
+                user = User(id=user_data[0], username=user_data[1], email=email)
+                login_user(user)
+                return redirect(url_for('index'))
+            else:
+                print('Senha errada')
+        # else:
+        #     print('Email não cadastrado')
+        return render_template('login.html') # colocar mensagem de erro
     elif request.method == 'GET':
         return render_template('login.html')
 
