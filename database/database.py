@@ -1,11 +1,13 @@
 import sqlite3
-from werkzeug.security import check_password_hash, generate_password_hash
-from .query import insert, select
+# from werkzeug.security import check_password_hash, generate_password_hash
+# from .query import insert, select
 from typing import Union, Any
 
 class Database:
     def __init__(self, db_path:str) -> None:
         '''
+        Classe que faz a conexão com o banco de dados e executa os SQL
+
         Parâmetros:
             - db_path: Caminho e nome do arquivo onde o banco ficará armazenado
         '''
@@ -31,7 +33,7 @@ class Database:
 
 
     # AJUSTAR RUN QUERY PRA SER UTILIZADO DENTRO DA CLASSE EM FUNÇÕES COMO add_user
-    def run_query(self, sql_query:str, params:Union[tuple[str], str] = None) -> list: # fazer doc depois
+    def run_query(self, sql_query:str, params:Union[tuple,list] = None) -> list: # fazer doc depois
         result = None
         try:
             if params:
@@ -41,9 +43,10 @@ class Database:
 
             self.connection.commit()
             result = cursor.fetchall()
+            self.connection.close()
         except Exception as e: # tirar quando entrar em produção
-            print(e)
-        self.connection.close()
+            print(f'Erro ao rodar query: {e}')
+        
         return result
 
     def run_sql_file(self, sql_path:str): # fazer doc
@@ -51,26 +54,12 @@ class Database:
             self.connection.executescript(fr.read())
             self.connection.close()
 
-    def add_user(self, username: str, email: str, password: str):
-        '''
-        Adiciona os dados do usuário na tabela users, criptografando a senha
-        
-        Parâmetros:
-            - username: Nome do usuário
-            - email: E-mail do usuário
-            - password: Senha do usuário NÃO CRIPTOGRAFADA
-        '''
-        password_hash = generate_password_hash(password)
-        query = insert('users', ('username', 'email', 'password_hash'))
-
-        self.run_query(query, (username, email, password_hash))
-
 if __name__ == '__main__':
     db = Database('./database/database.db')
 
     db.run_query("DELETE FROM sqlite_sequence WHERE name='users'") # tira os ids no autoincrement, só pra deixar bonito no sqlite viewer
     db.run_query("DELETE FROM users")
-    db.add_user('ZagZ', 'azevedodvictor@gmail.com', 'senhaBEMdificil')
+    # db.add_user('ZagZ', 'azevedodvictor@gmail.com', 'senhaBEMdificil')
 
     print(db.run_query('SELECT * FROM users'))
 
