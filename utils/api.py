@@ -7,7 +7,12 @@ class Manga:
 
     def __init__(self, manga_id:str):
         self.manga_id = manga_id
+        self._init_properties()
+
+    def _init_properties(self):
+        'Função para organizar a inicialização das properties, definindo todas as variáveis necessárias como None, evitando a poluição do init'
         self._manga_data = None
+
         self._cover_id = None
         self._cover_filename = None
         self._cover_image = None
@@ -63,6 +68,9 @@ class Manga:
             except Exception as e:
                 print(f'Erro ao buscar a imagem da cover_art: {e}')
         return self._cover_image    
+    
+    # @property
+    # def manga_name(self, language) -> str
 if __name__ == '__main__':
     jojo = Manga('1044287a-73df-48d0-b0b2-5327f32dd651')
     print(jojo.cover_image)
