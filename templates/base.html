@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} {% if request.endpoint != 'index' %} - {% endif %}Manga&Chips</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    {% block head %}{% endblock head %}
+</head>
+<body>
+    <header>
+        <div id="links-div">
+            <a href="{{ url_for('index') }}">Início</a>
+            <a href="{{ url_for('login') }}">Login</a>
+            <a href="{{ url_for('register') }}">Cadastro</a>
+        </div>
+        <div>
+            <form action="url_for('search')" method="get">
+                <input placeholder="Pesquisa" type="text">
+                <button type="submit">Pesquisar</button>
+            </form>
+        </div>
+    </header>
+
+    <main>{% block main %}{% endblock main %}</main>
+    
+    <footer>
+        <p>path:{{request.path}}</p>
+        <p>endpoint:{{request.endpoint}}</p>
+    </footer>
+</body>
+</html>
+

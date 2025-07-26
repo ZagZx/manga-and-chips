@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <img src="{{ url_for('cover_proxy', manga_id='1044287a-73df-48d0-b0b2-5327f32dd651',filename='e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg') }}" alt="">
-</body>
-</html>
+{% extends "base.html" %}
+
+
+{% block main %}
+    <img src="{{ url_for('cover_proxy', manga_id='1044287a-73df-48d0-b0b2-5327f32dd651', filename='e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg') }}" alt="">
+{% endblock main %}
