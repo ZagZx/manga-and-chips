@@ -4,10 +4,13 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from dotenv import load_dotenv
 
 import os
-import requests
+import time
 
 from database import Database
 from models import User
+
+from utils.manga import Manga
+
 
 DB_PATH = './database/database.db'
 SQL_PATH = './database/schema.sql'
@@ -89,8 +92,14 @@ def cover_proxy():
     manga_id = request.args.get('manga_id')
     filename = request.args.get('filename')
 
-    if filename and manga_id:
-        url = f'https://uploads.mangadex.org/covers/{manga_id}/{filename}'
-        response = requests.get(url)
+    before = time.time()
+    
+    manga = Manga(manga_id)
 
-        return Response(response.content, content_type=response.headers['Content-Type'])
+    if filename and manga_id:
+        cover_image = manga.cover_image
+
+        now = time.time()
+        print(f'\nTEMPO DE EXECUÇÃO: {round(now-before,2)}s\n')
+
+        return Response(cover_image.content, content_type=cover_image.headers['Content-Type'])

@@ -58,16 +58,17 @@ class Manga:
         return self._cover_filename
     
     @property
-    def cover_image(self) -> Union[bytes, None]:
+    def cover_image(self) -> Union[requests.Response, None]:
         if not self._cover_image:
             try:
                 if not self.cover_filename:
                     raise Exception('Não foi possível obter o cover_filename')
                 response = requests.get(f'{self.BASE_UPLOADS_URL}/covers/{self.manga_id}/{self.cover_filename}')
-                self._cover_image = response.content
+                self._cover_image = response
+                # self._cover_image = response.content
             except Exception as e:
                 print(f'Erro ao buscar a imagem da cover_art: {e}')
-        return self._cover_image    
+        return self._cover_image 
     
     # @property
     # def manga_name(self, language) -> str
