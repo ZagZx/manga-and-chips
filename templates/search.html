@@ -1,3 +1,16 @@
 {% extends "base.html" %}
 
-{% block title %}{% endblock title %}
+{% block title %} {{ request.args.get('query') }} {% endblock title %}
+
+
+{% block main %}
+
+<div class="container">
+    {% for manga in mangas_list %}
+    <div class="card">
+        <img width="112" height="160" src="{{ url_for('cover_proxy', manga_id = manga.id, filename = manga.cover_filename) }}" alt="">
+        <span>{{ manga.title }}</span>
+    </div>
+    {% endfor %}
+</div>
+{% endblock main %}

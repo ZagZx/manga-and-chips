@@ -37,6 +37,9 @@ class Manga:
             except Exception as e:
                 print(f'Erro ao buscar os dados do mangá: {e}')
         return self._manga_data
+    @manga_data.setter
+    def manga_data(self, data:dict):
+        self._manga_data = data
     
     @property
     def title(self) -> str:

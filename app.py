@@ -9,7 +9,7 @@ import time
 from database import Database
 from models import User
 
-from utils.api import Manga
+from utils.api import Manga, search_manga_by_title
 
 
 DB_PATH = './database/database.db'
@@ -41,6 +41,19 @@ def load_user(user_id):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/search')
+def search():
+    title = request.args.get('query')
+    results = search_manga_by_title(title)
+
+    mangas_list = []
+    for manga_data in results:
+        manga = Manga(manga_data['id'])
+        manga.manga_data = manga_data
+        mangas_list.append(manga)
+        # print(manga.title)
+    return render_template('search.html', mangas_list = mangas_list)
 
 @app.route('/cadastro', methods=['GET', 'POST'])
 def register():
@@ -87,11 +100,8 @@ def logout():
 
     return redirect(url_for('index'))
 
-@app.route('/cover-proxy')
-def cover_proxy():
-    manga_id = request.args.get('manga_id')
-    filename = request.args.get('filename')
-
+@app.route('/cover-proxy/<manga_id>/<filename>')
+def cover_proxy(manga_id:str, filename:str):
     before = time.time()
     
     manga = Manga(manga_id)
@@ -100,6 +110,8 @@ def cover_proxy():
         cover_image = manga.cover_image
 
         now = time.time()
-        print(f'\nTEMPO DE EXECUÇÃO: {round(now-before,2)}s\n')
+        print('\n====COVER PROXY====')
+        print(f'Mangá: {manga.title}')
+        print(f'Tempo de Execução: {round(now-before,2)}s\n')
 
         return Response(cover_image.content, content_type=cover_image.headers['Content-Type'])
