@@ -9,7 +9,7 @@ import time
 from database import Database
 from models import User
 
-from utils.api.manga import Manga
+from utils.api import Manga
 
 
 DB_PATH = './database/database.db'
