@@ -30,3 +30,26 @@ Exibe a imagem da capa.
 - **endpoint:** /covers/{manga_id}/{cover_filename}
 
 **Retorna:** Imagem da capa do mangá
+
+## Todos os capítulos de um mangá
+Busca os dados de todos os capítulos por idioma(s)
+- **baseURL:** api.mangadex.org
+- **endpoint:** /manga/{manga_id}/feed?translatedLanguage[]={idioma do mangá}
+
+**Retorna:** Os dados de todos os capítulos
+- ID
+- Título
+- Número do capítulo e volume
+- Quantidade de páginas
+- Relacionamentos (Mangá, scan que traduziu, usuário que deu upload)
+ (id, numero do capitulo, qnt de paginas, relacionamentos)
+
+## Buscar nome de arquivo das páginas do capítulo
+Busca nomes dos arquivos das imagens de páginas do capítulo especificado por id
+- **baseURL:** api.mangadex.org
+- **endpoint:** /at-home/server/{chapter_id}
+
+**Retorna:** Nomes dos arquivos das imagens (data ou dataSaver) de páginas do capítulo especificado
+https://api.mangadex.org/at-home/server/1613cd84-53ea-4ad9-b09d-724d55c18ef4
+
+## Imagem de página
