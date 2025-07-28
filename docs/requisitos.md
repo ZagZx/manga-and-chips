@@ -22,31 +22,35 @@ Site para ler mangás, podendo adiciona-los a uma biblioteca para acompanhar o m
 - RF08: Possibilidade pesquisar os mangás por nome.
 - RF09: Possibilidade de pesquisar os mangás por categoria, em uma página onde os mangás são ordenados por ordem alfabética e pode-se selecionar uma letra para exibir apenas os mangás que comecem com aquela letra. 
 
+### Leitura
+
+- RF10: Qualquer pessoa, logada ou não poderá ler os mangás
+- RF11: Páginas do mangá serão carregadas uma por uma e serão passadas através de um botão de próximo ou anterior
+
 # Requisitos não funcionais
 
 ### Backend
 
 - RNF01: Backend em Python utilizando o framework Flask.
 - RNF02: Extensão flask-login para autenticação.
-- RNF03: SQLite para o gerenciamento do banco de dados de usuários e dados do recurso.
-- RNF04: API do MangaDex para download de páginas do mangá, pesquisa, capas, etc.
+- RNF03: API do MangaDex para download de páginas do mangá, pesquisa, capas, etc.
 
 ### Frontend
 
-- RNF05: HTML, CSS e Javascript.
-- RNF06: Framework Tailwind ou Boostrap para facilitar o desenvolvimento da interface.
+- RNF04: HTML, CSS e Javascript.
+- RNF05: Framework Tailwind ou Boostrap para facilitar o desenvolvimento da interface.
 
 ### Banco de Dados
 
-- RNF07: Linguagem MySQL.
+- RNF06: SQLite para o gerenciamento do banco de dados de usuários e dados do recurso.
 
 ### Templates
 
-- RNF08: Uso de extends/includes para layout e mensagens de erro.
-- RNF09: Páginas de erro personalizadas.
+- RNF07: Uso de extends/includes para layout e mensagens de erro.
+- RNF08: Páginas de erro personalizadas.
 
 ### Documentações e instruções
 
-- RNF10: Código versionado no GitHub com entregas semanais.
-- RNF11: Modelo conceitual e/ou lógico do banco de dados.
-- RNF12: README com instruções.
+- RNF09: Código versionado no GitHub com entregas semanais.
+- RNF10: Modelo conceitual e/ou lógico do banco de dados.
+- RNF11: README com instruções.
