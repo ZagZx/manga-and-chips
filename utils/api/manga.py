@@ -29,7 +29,7 @@ class Manga:
         self._cover_image = None
 
         self._chapters_data = {}
-        self._chapters_filenames = {}
+        self._chapters_filename = {}
     
     @property
     def manga_data(self) -> dict:
@@ -148,19 +148,20 @@ class Manga:
                 print(f'Erro ao obter os dados dos capítulos: {e}')
         return self._chapters_data
     
-    # def get_chapters_filename(self, language:str = 'pt-br') -> list[str]:
-    #     if not self._chapters_filenames.get(language):
-    #         try:
-    #             for chapter in self.get_chapters_data[language]:
-    #                 url = f'{self.BASE_URL}/at-home/server/{chapter['id']}'
-    #             #     url = f'{self.BASE_URL}/at-home/server/{chapter['id']}'
-    #             #     response = requests.get(url)
+    def get_chapters_filename(self, language:str = 'pt-br') -> list[str]:
+        if not self._chapters_filename.get(language):
+            try:
+                for sla in self.get_chapters_data(language)[language]:
+                    # url = f'{self.BASE_URL}/at-home/server/{chapter['id']}'
+                    print(sla)
+                #     url = f'{self.BASE_URL}/at-home/server/{chapter['id']}'
+                #     response = requests.get(url)
                 
-    #             # self._chapters_data[language] = response.json()['data']
-    #         except Exception as e:
-    #             print(f'Erro ao obter os dados dos capítulos: {e}')
+                # self._chapters_data[language] = response.json()['data']
+            except Exception as e:
+                print(f'Erro ao obter os dados dos capítulos: {e}')
        
-    #     return self._chapters_filename
+        return self._chapters_filename
         
 
     # @property
@@ -168,4 +169,4 @@ class Manga:
 if __name__ == '__main__':
     jojo = Manga('1044287a-73df-48d0-b0b2-5327f32dd651')
     print(jojo.title)
-    # print(jojo.get_chapters_data())
+    print(jojo.get_chapters_filename())
