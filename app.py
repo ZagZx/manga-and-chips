@@ -51,8 +51,15 @@ def search():
     for manga_data in results:
         manga = Manga(manga_data['id'])
         manga.manga_data = manga_data
-        mangas_list.append(manga)
-        # print(manga.title)
+
+        mangas_list.append(
+            {
+                "id": manga.id,
+                "title": manga.title,
+                "cover_image": url_for('cover_proxy_by_manga_id', manga_id = manga.id)
+            }
+        )
+
     return render_template('search.html', mangas_list = mangas_list)
 
 @app.route('/cadastro', methods=['GET', 'POST'])
@@ -115,3 +122,16 @@ def cover_proxy(manga_id:str, filename:str):
         print(f'Tempo de Execução: {round(now-before,2)}s\n')
 
         return Response(cover_image.content, content_type=cover_image.headers['Content-Type'])
+    
+@app.route('/cover_proxy/<manga_id>')
+def cover_proxy_by_manga_id(manga_id):
+    '''
+    Gambiarra para acelerar a pesquisa, ao invés de passar os filenames e travar a página por muito tempo,
+    é passado no dicionário um url_for para esta rota e nela é obtido o filename e então ela redireciona para a cover_proxy.
+
+    Ou seja, aumenta o tempo de carregamento das imagens para diminuir consideravelmente o tempo de tela travada.
+    '''
+
+    manga = Manga(manga_id)
+    cover_filename = manga.cover_filename
+    return redirect(url_for('cover_proxy', manga_id = manga_id, filename = cover_filename))
