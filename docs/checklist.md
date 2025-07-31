@@ -24,8 +24,8 @@
 
 ### Semana 4 (25/07–31/07)
 - Uso refinado de Flask:
-    - Uso de request para formulários/dados
-    - Uso de redirect e url_for
+    - Uso de request para formulários/dados ✅
+    - Uso de redirect e url_for ✅
     - Uso de make_response (exemplo: cookies ou headers customizados)
 - Tratamento de erros:
     - Páginas personalizadas para 404 e 500
