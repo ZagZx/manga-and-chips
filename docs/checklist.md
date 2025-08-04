@@ -36,6 +36,6 @@
 - [ ] Ajustes finais no código
 - [ ] README bem elaborado:
     - [ ] Instruções para rodar localmente
-    - [] Dependências
-    - [] Screenshots ou gifs opcionais
-- [] Revisão final e entrega no GitHub
+    - [ ] Dependências
+    - [ ] Screenshots ou gifs opcionais
+- [ ] Revisão final e entrega no GitHub
