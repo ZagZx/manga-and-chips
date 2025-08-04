@@ -12,30 +12,30 @@
     - [x] Senha com hash seguro 
     - [x] Sessão ou Flask-Login para manter usuário autenticado 
 - [x] Logout funcional 
-- [] Templates com extends/includes para base e navbar
+- [ ] Templates com extends/includes para base e navbar
 
 ### Semana 3 (18/07–24/07)
-- [] Implementar CRUD do recurso escolhido:
-    - [] Criar
-    - [] Listar
-    - [] Editar
-    - [] Excluir
-- [] Restrição de acesso: cada usuário só pode ver/editar/excluir seus dados
+- [ ] Implementar CRUD do recurso escolhido:
+    - [ ] Criar
+    - [ ] Listar
+    - [ ] Editar
+    - [ ] Excluir
+- [ ] Restrição de acesso: cada usuário só pode ver/editar/excluir seus dados
 
 ### Semana 4 (25/07–31/07)
-- [] Uso refinado de Flask:
+- [ ] Uso refinado de Flask:
     - [x] Uso de request para formulários/dados
     - [x] Uso de redirect e url_for 
-    - [] Uso de make_response (exemplo: cookies ou headers customizados)
-- [] Tratamento de erros:
-    - [] Páginas personalizadas para 404 e 500
+    - [ ] Uso de make_response (exemplo: cookies ou headers customizados)
+- [ ] Tratamento de erros:
+    - [ ] Páginas personalizadas para 404 e 500
 
 ### Semana 5 (01/08–13/08)
-- [] Testes manuais completos
-- [] Estilização básica com CSS ou Bootstrap
-- [] Ajustes finais no código
-- [] README bem elaborado:
-    - [] Instruções para rodar localmente
+- [ ] Testes manuais completos
+- [ ] Estilização básica com CSS ou Bootstrap
+- [ ] Ajustes finais no código
+- [ ] README bem elaborado:
+    - [ ] Instruções para rodar localmente
     - [] Dependências
     - [] Screenshots ou gifs opcionais
 - [] Revisão final e entrega no GitHub
