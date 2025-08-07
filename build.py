@@ -8,7 +8,7 @@ def beauty_print(string:str):
     print(string)
     print('='*45)
 
-STEPS = 4
+STEPS = 3
 
 print('Iniciando Build')
 
@@ -39,8 +39,3 @@ elif os.name == 'nt':
 requirements_file = 'requirements.txt'
 subprocess.run([pip_bin, 'install', '-r', requirements_file], check=True)
 beauty_print(f'Dependências instaladas | 3/{STEPS}')
-
-from database.models import Base
-from database.database import engine
-Base.metadata.create_all(engine)
-beauty_print(f'Tabelas criadas no banco de dados | 4/{STEPS}')
