@@ -1,7 +1,7 @@
 from flask import url_for, render_template, request, Blueprint
 from api import search_manga_by_title, Manga
 
-search_bp = Blueprint('pesquisa', __name__, url_prefix='/pesquisa')
+search_bp = Blueprint('search', __name__)
 
 @search_bp.route('/pesquisa')
 def search():
@@ -17,7 +17,7 @@ def search():
             {
                 "id": manga.id,
                 "title": manga.title,
-                "cover_image": url_for('cover_proxy_by_manga_id', manga_id = manga.id)
+                "cover_image": url_for('proxy.cover_proxy_by_manga_id', manga_id = manga.id)
             }
         )
 

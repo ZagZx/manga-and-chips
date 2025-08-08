@@ -31,4 +31,4 @@ def cover_proxy_by_manga_id(manga_id):
 
     manga = Manga(manga_id)
     cover_filename = manga.cover_filename
-    return redirect(url_for('cover_proxy', manga_id = manga_id, filename = cover_filename))
+    return redirect(url_for('proxy.cover_proxy', manga_id = manga_id, filename = cover_filename))

@@ -2,8 +2,8 @@ from flask import request, redirect, url_for, render_template
 from werkzeug.security import generate_password_hash
 from . import auth_bp
 
-@auth_bp.route('/cadastro', methods=['GET', 'POST'])
-def register():
+@auth_bp.route('/signup', methods=['GET', 'POST'])
+def signup():
     if request.method == 'POST':
         username = request.form.get('username')
         email = request.form.get('email')
