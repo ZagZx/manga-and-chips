@@ -20,7 +20,6 @@ def signup():
             with current_app.app_context():
                 db.session.add(User(username=username, email=email, password_hash=password_hash))
                 db.session.commit()
-            # db.run_query(f"INSERT INTO users(username, email, password_hash) VALUES (?, ?, ?)", (username, email, password_hash))
             return redirect(url_for('auth.login'))
     if request.method == 'GET':
         return render_template('register.html')
