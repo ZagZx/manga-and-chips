@@ -10,12 +10,12 @@
 <body>
     <header>
         <div id="links-div">
-            <a href="{{ url_for('index') }}">Início</a>
-            <a href="{{ url_for('login') }}">Login</a>
-            <a href="{{ url_for('register') }}">Cadastro</a>
+            <a href="{{ url_for('index.index') }}">Início</a>
+            <a href="{{ url_for('auth.login') }}">Login</a>
+            <a href="{{ url_for('auth.register') }}">Cadastro</a>
         </div>
         <div>
-            <form action="{{ url_for('search') }}" method="get">
+            <form action="{{ url_for('search.search') }}" method="get">
                 <input placeholder="Pesquisa" name="query" type="text">
                 <button type="submit">Pesquisar</button>
             </form>
