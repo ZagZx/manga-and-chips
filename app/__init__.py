@@ -4,7 +4,9 @@ from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
 import os
 
-load_dotenv('../.env')
+load_dotenv('.env')
+
+print(os.getenv('SECRET_KEY'))
 
 login_manager = LoginManager()
 db = SQLAlchemy()
