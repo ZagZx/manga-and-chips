@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock title %} {% if request.endpoint != 'index' %} - {% endif %}Manga&Chips</title>
+    <title>{% block title %}{% endblock title %} {% if request.endpoint != 'index.index' %} - {% endif %}Manga&Chips</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
     {% block head %}{% endblock head %}
 </head>
