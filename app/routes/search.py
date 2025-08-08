@@ -1,5 +1,5 @@
 from flask import url_for, render_template, request, Blueprint
-from api import search_manga_by_title, Manga
+from app.api import search_manga_by_title, Manga
 
 search_bp = Blueprint('search', __name__)
 

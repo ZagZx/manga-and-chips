@@ -1,6 +1,7 @@
-from api import Manga
 from flask import render_template, url_for
 from . import manga_bp
+from app.api import Manga
+
 
 
 @manga_bp.route("/<manga_id>/chapter/<chapter_number>")

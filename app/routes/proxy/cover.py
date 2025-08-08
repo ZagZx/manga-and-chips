@@ -1,6 +1,7 @@
 from flask import redirect, url_for, Response
 from time import time
-from api import Manga
+
+from app.api import Manga
 from . import proxy_bp
 
 

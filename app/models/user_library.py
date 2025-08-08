@@ -1,5 +1,5 @@
 from sqlalchemy import Column, String, Integer, ForeignKey
-from models import db
+from app import db
 
 class UserLibrary(db.Model):
     __tablename__ = "user_library"

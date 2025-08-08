@@ -1,9 +1,9 @@
-from flask import request, redirect, url_for, render_template
+from flask import request, redirect, url_for, render_template, current_app
 from flask_login import login_user
-from models import User
 from werkzeug.security import check_password_hash
-from . import auth_bp
 
+from . import auth_bp
+from app.models import User
 
 @auth_bp.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -12,7 +12,12 @@ def login():
         email = request.form.get('email')
         password = request.form.get('password')
 
-        user_data = db.run_query('SELECT id, username, password_hash FROM users WHERE email = ?', (email,))
+        # user = 
+        with current_app.app_context():
+            pass
+
+
+        # user_data = db.run_query('SELECT id, username, password_hash FROM users WHERE email = ?', (email,))
         if user_data:
             user_data = user_data[0]
             if check_password_hash(user_data[2], password):
