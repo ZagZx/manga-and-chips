@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<p>Hash: {{ chapter['chapter']['hash'] }}</p>
+<p>BaseUrl: {{ chapter['baseUrl']}}</p>
+<hr>
+
+{% for filename in chapter['chapter']['data'] %}
+    <p>{{ filename }}</p>
+    <p>{{ url_for('proxy.page', baseUrl=chapter['baseUrl'], hash=chapter['chapter']['hash'], filename=filename) }}</p>
+    <img width="480px" src="{{ url_for('proxy.page', baseUrl=chapter['baseUrl'], hash=chapter['chapter']['hash'], filename=filename) }}" alt="">
+    <br>
+    
+{% endfor %}
+{# oie #}
+{% endblock main %}

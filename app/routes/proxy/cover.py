@@ -6,7 +6,7 @@ from . import proxy_bp
 
 
 @proxy_bp.route('/cover/<manga_id>/<filename>')
-def cover_proxy(manga_id:str, filename:str):
+def cover(manga_id:str, filename:str):
     before = time()
     
     manga = Manga(manga_id)
@@ -22,7 +22,7 @@ def cover_proxy(manga_id:str, filename:str):
         return Response(cover_image.content, content_type=cover_image.headers['Content-Type'])
     
 @proxy_bp.route('/cover/<manga_id>')
-def cover_proxy_by_manga_id(manga_id):
+def cover_by_manga_id(manga_id):
     '''
     Gambiarra para acelerar a pesquisa, ao invés de passar os filenames e travar a página por muito tempo,
     é passado no dicionário um url_for para esta rota e nela é obtido o filename e então ela redireciona para a cover_proxy.
@@ -32,4 +32,4 @@ def cover_proxy_by_manga_id(manga_id):
 
     manga = Manga(manga_id)
     cover_filename = manga.cover_filename
-    return redirect(url_for('proxy.cover_proxy', manga_id = manga_id, filename = cover_filename))
+    return redirect(url_for('proxy.cover', manga_id = manga_id, filename = cover_filename))

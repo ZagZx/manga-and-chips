@@ -126,7 +126,7 @@ class Manga:
     def cover_image(self) -> Union[requests.Response, None]:
         if not self._cover_image:
             try:
-                if not self.cover_filename: # por que esse if?
+                if not self.cover_filename:
                     raise Exception('Não foi possível obter o cover_filename')
                 response = requests.get(f'{self.BASE_UPLOADS_URL}/covers/{self.id}/{self.cover_filename}')
                 self._cover_image = response
@@ -144,10 +144,15 @@ class Manga:
                 self._chapters_data[language] = response.json()['data']
             except Exception as e:
                 print(f'Erro ao obter os dados dos capítulos: {e}')
+        
+        # import json
+        # with open('./app/api/chapters_data.json', 'w') as fw:
+        #     json.dump(self._chapters_data, fw, indent=4)
+        
         return self._chapters_data
     
     def get_chapter_data(self, chapter_number:Union[int, str], language:str = 'pt-br') -> dict:
-        chapter_data = {}
+        # chapter_data = {}
         try:
             for chapter in self.get_chapters_data(language)[language]:
                 if chapter['attributes']['chapter'] == str(chapter_number):
@@ -186,8 +191,10 @@ class Manga:
         try:
             chapter = self.get_chapter_data(chapter_number, language)
             url = f'{self.BASE_URL}/at-home/server/{chapter['id']}'
+            
             response = requests.get(url)        
             athome_data = response.json()
+            # print(athome_data)
         except Exception as e:
             print(f'Erro ao obter os dados athome do capítulo: {e}')
         return athome_data

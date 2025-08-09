@@ -3,7 +3,7 @@ from app.api import search_manga_by_title, Manga
 
 search_bp = Blueprint('search', __name__)
 
-@search_bp.route('/pesquisa')
+@search_bp.route('/search')
 def search():
     title = request.args.get('query')
     results = search_manga_by_title(title)
@@ -17,7 +17,7 @@ def search():
             {
                 "id": manga.id,
                 "title": manga.title,
-                "cover_image": url_for('proxy.cover_proxy_by_manga_id', manga_id = manga.id)
+                "cover_image": url_for('proxy.cover_by_manga_id', manga_id = manga.id)
             }
         )
 
