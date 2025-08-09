@@ -2,6 +2,7 @@
 - **manga_id:** 1044287a-73df-48d0-b0b2-5327f32dd651
 - **cover_id:** 6c0a3578-f000-4226-a592-bec6fae582f2
 - **cover_jpg:** e7e5e267-502f-4b77-9f19-b7ea1344f68f.jpg
+- **chapter_id:** 87ac4e0c-f931-4777-9d86-32f2f277c3cc
 
 ## Busca por título
 Busca pelo título informações do mangá.
@@ -35,6 +36,7 @@ Exibe a imagem da capa.
 Busca os dados de todos os capítulos por idioma(s)
 - **baseURL:** api.mangadex.org
 - **endpoint:** /manga/{manga_id}/feed?translatedLanguage[]={idioma do mangá}
+- **exemplo:** api.mangadex.org/manga/044287a-73df-48d0-b0b2-5327f32dd651/feed?translatedLanguage[]=pt-br
 
 **Retorna:** Os dados de todos os capítulos
 - ID

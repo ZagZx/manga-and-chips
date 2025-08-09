@@ -1,22 +1,19 @@
 {% extends "base.html" %}
 
-{% block title %}Cadastro{% endblock title %}
+{% block title %}Login{% endblock title %}
 
 {% block head %}
 {{ super() }}
 {% endblock head %}
 
 {% block main %}
-<form action="{{ url_for('register') }}" method="post">
-    <label for="username">Nome de Usuário</label>
-    <input type="text" name="username">
-    
+<form action="{{ url_for('auth.login') }}" method="post">
     <label for="email">Email</label>
     <input type="email" name="email">
 
     <label for="password">Senha</label>
     <input type="password" name="password">
 
-    <button type="submit">Cadastrar</button>
+    <button type="submit">Entrar</button>
 </form>
 {% endblock main %}

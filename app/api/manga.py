@@ -27,7 +27,8 @@ class Manga:
         self._cover_id = ''
         self._cover_filename = ''
         self._cover_image = None
-    
+
+        self._chapters_data = {}    
     @property
     def manga_data(self) -> dict:
         if not self._manga_data:
@@ -125,7 +126,7 @@ class Manga:
     def cover_image(self) -> Union[requests.Response, None]:
         if not self._cover_image:
             try:
-                if not self.cover_filename: # por que esse if?
+                if not self.cover_filename:
                     raise Exception('Não foi possível obter o cover_filename')
                 response = requests.get(f'{self.BASE_UPLOADS_URL}/covers/{self.id}/{self.cover_filename}')
                 self._cover_image = response
@@ -134,8 +135,71 @@ class Manga:
                 print(f'Erro ao buscar a imagem da cover_art: {e}')
         return self._cover_image 
     
-    # @property
-    # def manga_name(self, language) -> str
+    def get_chapters_data(self, language:str = 'pt-br') -> dict:
+        if not self._chapters_data.get(language):
+            try:
+                url = f'{self.BASE_URL}/manga/{self.id}/feed/?translatedLanguage[]={language}'
+                response = requests.get(url)
+                
+                self._chapters_data[language] = response.json()['data']
+            except Exception as e:
+                print(f'Erro ao obter os dados dos capítulos: {e}')
+        
+        # import json
+        # with open('./app/api/chapters_data.json', 'w') as fw:
+        #     json.dump(self._chapters_data, fw, indent=4)
+        
+        return self._chapters_data
+    
+    def get_chapter_data(self, chapter_number:Union[int, str], language:str = 'pt-br') -> dict:
+        # chapter_data = {}
+        try:
+            for chapter in self.get_chapters_data(language)[language]:
+                if chapter['attributes']['chapter'] == str(chapter_number):
+                    chapter_data = chapter
+                    chapter_data['id'] # só pra garantir que os dados que vieram estão certos
+        except Exception as e:
+            print(f'Erro ao obter os dados do capítulo {chapter_number}: {e}')
+        return chapter_data
+    
+    def get_chapter_athome_data(self, chapter_number:Union[int,str], language:str = 'pt-br') -> dict:
+        '''
+        Parâmetros:
+            - chapter_number: número do capítulo que os dados serão pegos
+            - language: idioma do capítulo
+
+        Retorna: um dicionário com os dados utilizados na busca das imagens dos capítulos
+            - baseUrl -> str: a url onde será feita a busca das imagens
+            - hash -> str: id para a busca das imagens do capítulo específico
+            - data -> list[str]: lista com os nomes dos arquivos das imagens (filename)
+            - dataSaver -> list[str]: lista com os nomes dos arquivos das imagens (filename), esses tem menos qualidade, logo são mais leves
+
+        Como obter esses dados?
+        ```python
+            var = get_chapter_athome_data(chapter_number=1, language='en')
+
+            urlBase = var['baseUrl']
+            hash = var['chapter']['hash'] 
+            data = var['chapter']['data']
+            dataSaver = var['chapter']['dataSaver']
+        ```
+            
+        Agora podemos fazer a requisição de uma imagem com:
+            - urlBase/{hash}/{filename}
+        '''
+        athome_data = {}
+        try:
+            chapter = self.get_chapter_data(chapter_number, language)
+            url = f'{self.BASE_URL}/at-home/server/{chapter['id']}'
+            
+            response = requests.get(url)        
+            athome_data = response.json()
+            # print(athome_data)
+        except Exception as e:
+            print(f'Erro ao obter os dados athome do capítulo: {e}')
+        return athome_data
+    
 if __name__ == '__main__':
     jojo = Manga('1044287a-73df-48d0-b0b2-5327f32dd651')
     print(jojo.title)
+    print(jojo.get_chapter_athome_data(1))
