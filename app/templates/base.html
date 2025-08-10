@@ -1,32 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %} {% if request.endpoint != 'index.index' %} - {% endif %}Manga&Chips</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    {# <script src="https://cdn.tailwindcss.com"></script> #}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='assets/book.ico') }}" type="image/x-icon">
+
+    <script>
+        function dropMenu(){
+            menu = document.getElementById('menu-content')
+            display = menu.style.display
+            console.log(display)
+            if (display == '' || display == 'none'){
+                menu.style.display = 'flex'
+                console.log('virou flex')
+            }
+            else if (display == 'flex'){
+                menu.style.display = 'none'
+                console.log('virou none')
+            }
+        }
+    </script>
     {% block head %}{% endblock head %}
 </head>
 <body>
     <header>
-        <div id="links-div">
-            <a href="{{ url_for('index.index') }}">Início</a>
-            <a href="{{ url_for('auth.login') }}">Login</a>
-            <a href="{{ url_for('auth.signup') }}">Cadastro</a>
-        </div>
-        <div>
+        <a href="{{ url_for('index.index') }}">
+            <div id="logo-container">
+                <i class="fas fa-book-open logo"></i>
+                <h1>Manga<span style="color: #ef4444;">&</span>Chips</h1>
+            </div>
+        </a>
+            
+        <nav>
+            <a class="anchor-hover" href="{{ url_for('index.index') }}">Início</a>
+            <a class="anchor-hover" href="#">Biblioteca</a>
+            <a class="anchor-hover" href="#">Categorias</a>
+
+        </nav>
+
+        <div class="flex-container">
             <form action="{{ url_for('search.search') }}" method="get">
-                <input placeholder="Pesquisa" name="query" type="text">
-                <button type="submit">Pesquisar</button>
+                <div id="search-container">
+                    <input placeholder="Buscar Mangá..." name="query" type="text">
+                    <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+                </div>
             </form>
+
+            <div id="user-menu">
+                <i onclick="dropMenu()" id="user-logo" class="fas fa-user-circle anchor-hover"></i>
+                <div id="menu-content">
+                    <a class="anchor-hover" href="">Login</a>
+                    <a class="anchor-hover" href="">Cadastro</a>
+                    <a class="anchor-hover" href="">Sair</a>
+                </div>
+            </div>
         </div>
     </header>
 
     <main>{% block main %}{% endblock main %}</main>
     
     <footer>
-        {# <p>path:{{request.path}}</p>
-        <p>endpoint:{{request.endpoint}}</p> #}
+    
     </footer>
 </body>
 </html>
