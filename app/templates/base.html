@@ -1,32 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %} {% if request.endpoint != 'index.index' %} - {% endif %}Manga&Chips</title>
+
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/footer.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="{{ url_for('static', filename='assets/book.ico') }}" type="image/x-icon">
+
+    <script>
+        function dropMenu(){
+            const menu = document.getElementById('menu-content')
+            const logo = document.getElementById('user-logo')
+            
+            if (menu.style.display == 'flex'){
+                menu.style.display = 'none'
+                logo.style.color = ''
+                console.log('virou none')
+            }
+            else{
+                menu.style.display = 'flex'
+                logo.style.color = '#ef4444'
+
+                console.log('virou flex')
+            }
+        }
+    </script>
+
+    <script>
+        function initMainHeight(){
+            const body = document.querySelector('body')
+            const header = document.querySelector('header')
+            const main = document.querySelector('main')
+            const footer = document.querySelector('footer')
+            
+            main.style.paddingTop = header.offsetHeight + 'px'
+            main.style.minHeight = body.offsetHeight + 'px'
+            main.style.paddingBottom = footer.offsetHeight + 'px'
+        }
+
+        document.addEventListener('DOMContentLoaded', initMainHeight)
+        window.addEventListener('resize', initMainHeight)
+    </script>
+
     {% block head %}{% endblock head %}
 </head>
 <body>
     <header>
-        <div id="links-div">
-            <a href="{{ url_for('index.index') }}">Início</a>
-            <a href="{{ url_for('auth.login') }}">Login</a>
-            <a href="{{ url_for('auth.signup') }}">Cadastro</a>
-        </div>
-        <div>
+        <a href="{{ url_for('index.index') }}">
+            <div id="logo-container">
+                <i id="logo" class="fas fa-book-open"></i>
+                <h1>Manga<span style="color: #ef4444;">&</span>Chips</h1>
+            </div>
+        </a>
+            
+        <nav class="horizontal-nav">
+            <a class="anchor-hover" href="{{ url_for('index.index') }}">Início</a>
+            <a class="anchor-hover" href="#">Biblioteca</a>
+            <a class="anchor-hover" href="#">Categorias</a>
+
+        </nav>
+        
+        <div class="flex-container">
             <form action="{{ url_for('search.search') }}" method="get">
-                <input placeholder="Pesquisa" name="query" type="text">
-                <button type="submit">Pesquisar</button>
+                <div id="search-container">
+                    <input placeholder="Buscar Mangá..." name="query" type="text">
+                    <button id="search-button" type="submit"><i class="fas fa-search"></i></button>
+                </div>
             </form>
+
+            <div id="user-menu">
+                <i onclick="dropMenu()" id="user-logo" class="fas fa-user-circle anchor-hover"></i>
+                <div id="menu-content" class="vertical-nav">
+                    <a class="anchor-hover" href="{{ url_for('auth.login') }}">Login</a>
+                    <a class="anchor-hover" href="{{ url_for('auth.signup') }}">Cadastro</a>
+                    <a class="anchor-hover" href="{{ url_for('auth.logout') }}">Sair</a>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main>{% block main %}{% endblock main %}</main>
+    <main>
+        {% block main %}{% endblock main %}
+    </main>
     
     <footer>
-        {# <p>path:{{request.path}}</p>
-        <p>endpoint:{{request.endpoint}}</p> #}
+        <a href="https://mangadex.org/" target="_blank">
+            <div id="powered">
+                Powered by Mangadex
+                <img style="width: 1.5em;" src="{{ url_for('static', filename='assets/mangadex.png') }}" alt="">
+            </div>  
+        </a>
+        
+        <nav class="vertical-nav">
+            <a href="https://github.com/ZagZx" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+            </a>
+            <a href="https://www.linkedin.com/in/pedro-victor-75a069363/" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>Linkedin</span>
+            </a>
+        </nav>
     </footer>
 </body>
 </html>
