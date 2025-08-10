@@ -6,7 +6,8 @@
     <title>{% block title %}{% endblock title %} {% if request.endpoint != 'index.index' %} - {% endif %}Manga&Chips</title>
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/main.css') }}">
-    {# <script src="https://cdn.tailwindcss.com"></script> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/header.css') }}">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="{{ url_for('static', filename='assets/book.ico') }}" type="image/x-icon">
 
@@ -31,7 +32,7 @@
     <header>
         <a href="{{ url_for('index.index') }}">
             <div id="logo-container">
-                <i class="fas fa-book-open logo"></i>
+                <i id="logo" class="fas fa-book-open"></i>
                 <h1>Manga<span style="color: #ef4444;">&</span>Chips</h1>
             </div>
         </a>
