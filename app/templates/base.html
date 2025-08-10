@@ -13,16 +13,19 @@
 
     <script>
         function dropMenu(){
-            menu = document.getElementById('menu-content')
-            display = menu.style.display
-            console.log(display)
-            if (display == '' || display == 'none'){
-                menu.style.display = 'flex'
-                console.log('virou flex')
-            }
-            else if (display == 'flex'){
+            const menu = document.getElementById('menu-content')
+            const logo = document.getElementById('user-logo')
+            
+            if (menu.style.display == 'flex'){
                 menu.style.display = 'none'
+                logo.style.color = ''
                 console.log('virou none')
+            }
+            else{
+                menu.style.display = 'flex'
+                logo.style.color = '#ef4444'
+
+                console.log('virou flex')
             }
         }
     </script>

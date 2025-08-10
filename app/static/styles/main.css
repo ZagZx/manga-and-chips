@@ -11,11 +11,11 @@ a{
 
 header{
     display: flex;
+    position: static;
     justify-content: space-around;
     align-items: center;
     padding: 1em 1em;
     background-color: #1f2937;
-
 }
 
 body{

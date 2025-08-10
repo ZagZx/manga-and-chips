@@ -30,6 +30,10 @@ nav{
     border: 1px solid #4b5563;
 }
 
+#search-container:has(input:focus){
+    border-color: #ef4444;
+}
+
 #search-container input{
     outline: none;
     border: none;
