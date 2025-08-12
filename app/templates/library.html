@@ -6,6 +6,8 @@ Minha Biblioteca
 
 {% block main %}
     {% for manga_id in library_list %}
+        <img width="112" height="160" src="{{ url_for('proxy.cover_by_manga_id', manga_id=manga_id) }}" alt="">
+        
         <p>{{ manga_id }}</p>
     {% endfor %}
 {% endblock main %}
