@@ -46,11 +46,13 @@ def create_app(drop_tables:bool = False):
     from .routes.proxy import proxy_bp
     from .routes.index import index_bp
     from .routes.search import search_bp
+    from .routes.library import lib_bp
 
     app.register_blueprint(auth_bp)
     app.register_blueprint(manga_bp)
     app.register_blueprint(proxy_bp)
     app.register_blueprint(index_bp)
     app.register_blueprint(search_bp)
+    app.register_blueprint(lib_bp)
 
     return app

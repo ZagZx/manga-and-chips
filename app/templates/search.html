@@ -5,12 +5,20 @@
 
 {% block main %}
 
-<div class="container">
-    {% for manga in mangas_list %}
-    <div class="card">
-        <img width="112" height="160" src="{{ manga['cover_image'] }}" alt="">
-        <span>{{ manga['title'] }}</span>
+
+<form action="{{ url_for('library.add_to_library') }}" method="post">
+    <div class="container">
+        {% for manga in mangas_list %}
+        <div class="card">
+            <div>
+                <p>{{ manga['title'] }}</p> 
+                <button name="{{ manga['id'] }}" style="color: black;">Adicionar</button>
+                {# <a href=""><button style="color: black;">Ler</button></a> #}
+            </div>
+
+            <img width="112" height="160" src="{{ manga['cover_image'] }}" alt="">
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+</form>
 {% endblock main %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}
+Minha Biblioteca
+{% endblock title %}
+
+{% block main %}
+    {% for manga_id in library_list %}
+        <p>{{ manga_id }}</p>
+    {% endfor %}
+{% endblock main %}
