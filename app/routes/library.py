@@ -32,3 +32,21 @@ def add_to_library():
         db.session.commit()
         
     return redirect(url_for('library.library_view'))
+
+@lib_bp.route('/remove', methods = ['POST'])
+@login_required
+def remove():
+    keys = list(request.form.keys())
+    manga_id = keys[0]
+
+    row = UserLibrary.query.filter_by(user_id=current_user.id, manga_id=manga_id).first()
+    print(row)
+    with current_app.app_context():
+        try:        
+            db.session.delete(row)
+            db.session.commit()
+        except Exception as e:
+            print(e)
+            db.session.rollback()
+            db.session.remove()
+    return redirect(url_for('library.library_view'))
