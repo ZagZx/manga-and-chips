@@ -76,9 +76,16 @@
             <div id="user-menu">
                 <i onclick="dropMenu()" id="user-logo" class="fas fa-user-circle anchor-hover"></i>
                 <div id="menu-content" class="vertical-nav">
-                    <a class="anchor-hover" href="{{ url_for('auth.login') }}">Login</a>
-                    <a class="anchor-hover" href="{{ url_for('auth.signup') }}">Cadastro</a>
-                    <a class="anchor-hover" href="{{ url_for('auth.logout') }}">Sair</a>
+                    {% if current_user.id %}
+                        <p style="border-bottom: 1px solid white; padding-bottom:0.5em">{{current_user.username}}</p>
+                        <a class="anchor-hover" href="">Preferências</a>
+                        <a class="anchor-hover" href="{{ url_for('auth.logout') }}">Sair</a>
+                    {% else %}
+                        <a class="anchor-hover" href="{{ url_for('auth.login') }}">Login</a>
+                        <a class="anchor-hover" href="{{ url_for('auth.signup') }}">Cadastro</a>
+                    {% endif %}
+
+                    
                 </div>
             </div>
         </div>
@@ -91,7 +98,7 @@
     <footer>
         <a href="https://mangadex.org/" target="_blank">
             <div id="powered">
-                Powered by Mangadex
+                Powered by Mangadex API
                 <img style="width: 1.5em;" src="{{ url_for('static', filename='assets/mangadex.png') }}" alt="">
             </div>  
         </a>
