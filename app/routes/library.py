@@ -6,8 +6,9 @@ from app import db
 
 lib_bp = Blueprint('library', __name__, url_prefix='/library')
 
-@login_required
+
 @lib_bp.route('/')
+@login_required
 def library_view():
     library:list[UserLibrary] = UserLibrary.query.filter_by(user_id=current_user.id).all()
     
@@ -17,8 +18,9 @@ def library_view():
     
     return render_template('library.html', library_list=library_list)
 
-@login_required
+
 @lib_bp.route('/add', methods = ['POST'])
+@login_required
 def add_to_library():
     print(request.form.keys())
 
