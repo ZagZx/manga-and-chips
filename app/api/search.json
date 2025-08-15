@@ -1,5 +1,293 @@
 [
     {
+        "id": "a2c1d849-af05-4bbc-b2a7-866ebb10331f",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "One Piece (Official Colored)"
+            },
+            "altTitles": [
+                {
+                    "ru": "\u0412\u0430\u043d \u041f\u0438\u0441"
+                },
+                {
+                    "ar": "\u0648\u0646 \u067e\u06cc\u0633"
+                },
+                {
+                    "zh": "\u6d77\u8d3c\u738b"
+                },
+                {
+                    "ko": "\uc6d0\ud53c\uc2a4"
+                },
+                {
+                    "ja": "ONE PIECE \u30ab\u30e9\u30fc\u7248"
+                },
+                {
+                    "uk": "\u0412\u0430\u043f \u041f\u0456\u0441"
+                },
+                {
+                    "el": "One Piece (\u0395\u03c0\u03af\u03c3\u03b7\u03bc\u03b1 \u0388\u03b3\u03c7\u03c1\u03c9\u03bc\u03bf)"
+                },
+                {
+                    "vi": "\u0110\u1ea3o H\u1ea3i T\u1eb7c"
+                }
+            ],
+            "description": {
+                "el": "\u039f Gol D. Roger, \u03ad\u03bd\u03b1\u03c2 \u03ac\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u03b1\u03bd\u03b1\u03c6\u03ad\u03c1\u03b5\u03c4\u03b1\u03b9 \u03c9\u03c2 \u03bf \u00ab\u0392\u03b1\u03c3\u03b9\u03bb\u03b9\u03ac\u03c2 \u03c4\u03c9\u03bd \u03a0\u03b5\u03b9\u03c1\u03b1\u03c4\u03ce\u03bd\u00bb, \u03c0\u03c1\u03cc\u03ba\u03b5\u03b9\u03c4\u03b1\u03b9 \u03bd\u03b1 \u03b5\u03ba\u03c4\u03b5\u03bb\u03b5\u03c3\u03c4\u03b5\u03af \u03b1\u03c0\u03cc \u03c4\u03b7\u03bd \u03a0\u03b1\u03b3\u03ba\u03cc\u03c3\u03bc\u03b9\u03b1 \u039a\u03c5\u03b2\u03ad\u03c1\u03bd\u03b7\u03c3\u03b7. \u0391\u03bb\u03bb\u03ac \u03bb\u03af\u03b3\u03bf \u03c0\u03c1\u03b9\u03bd \u03c4\u03bf\u03bd \u03b8\u03ac\u03bd\u03b1\u03c4\u03cc \u03c4\u03bf\u03c5, \u03b5\u03c0\u03b9\u03b2\u03b5\u03b2\u03b1\u03b9\u03ce\u03bd\u03b5\u03b9 \u03c4\u03b7\u03bd \u03cd\u03c0\u03b1\u03c1\u03be\u03b7 \u03b5\u03bd\u03cc\u03c2 \u03bc\u03b5\u03b3\u03ac\u03bb\u03bf\u03c5 \u03b8\u03b7\u03c3\u03b1\u03c5\u03c1\u03bf\u03cd, \u03c4\u03bf\u03c5 One Piece, \u03c0\u03bf\u03c5 \u03b2\u03c1\u03af\u03c3\u03ba\u03b5\u03c4\u03b1\u03b9 \u03ba\u03ac\u03c0\u03bf\u03c5 \u03bc\u03ad\u03c3\u03b1 \u03c3\u03c4\u03bf\u03bd \u03b1\u03c0\u03ad\u03c1\u03b1\u03bd\u03c4\u03bf \u03c9\u03ba\u03b5\u03b1\u03bd\u03cc \u03b3\u03bd\u03c9\u03c3\u03c4\u03cc \u03c9\u03c2 \u039c\u03b5\u03b3\u03ac\u03bb\u03b7 \u0393\u03c1\u03b1\u03bc\u03bc\u03ae. \u0391\u03bd\u03b1\u03ba\u03bf\u03b9\u03bd\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03c2 \u03cc\u03c4\u03b9 \u03c4\u03bf One Piece \u03bc\u03c0\u03bf\u03c1\u03b5\u03af \u03bd\u03b1 \u03b4\u03b9\u03b5\u03ba\u03b4\u03b9\u03ba\u03b7\u03b8\u03b5\u03af \u03b1\u03c0\u03cc \u03bf\u03c0\u03bf\u03b9\u03bf\u03bd\u03b4\u03ae\u03c0\u03bf\u03c4\u03b5 \u03ac\u03be\u03b9\u03bf \u03bd\u03b1 \u03c4\u03bf \u03c6\u03c4\u03ac\u03c3\u03b5\u03b9, \u03bf \u0392\u03b1\u03c3\u03b9\u03bb\u03b9\u03ac\u03c2 \u03c4\u03c9\u03bd \u03a0\u03b5\u03b9\u03c1\u03b1\u03c4\u03ce\u03bd \u03b5\u03ba\u03c4\u03b5\u03bb\u03b5\u03af\u03c4\u03b1\u03b9 \u03ba\u03b1\u03b9 \u03b7 \u039c\u03b5\u03b3\u03ac\u03bb\u03b7 \u0395\u03c0\u03bf\u03c7\u03ae \u03c4\u03c9\u03bd \u03a0\u03b5\u03b9\u03c1\u03b1\u03c4\u03ce\u03bd \u03be\u03b5\u03ba\u03b9\u03bd\u03ac. \u0395\u03af\u03ba\u03bf\u03c3\u03b9 \u03c7\u03c1\u03cc\u03bd\u03b9\u03b1 \u03b1\u03c1\u03b3\u03cc\u03c4\u03b5\u03c1\u03b1, \u03ad\u03bd\u03b1\u03c2 \u03bd\u03b5\u03b1\u03c1\u03cc\u03c2 \u03bc\u03b5 \u03c4\u03bf \u03cc\u03bd\u03bf\u03bc\u03b1 Monkey D. Luffy \u03b5\u03af\u03bd\u03b1\u03b9 \u03ad\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2 \u03bd\u03b1 \u03be\u03b5\u03ba\u03b9\u03bd\u03ae\u03c3\u03b5\u03b9 \u03c4\u03b7 \u03b4\u03b9\u03ba\u03ae \u03c4\u03bf\u03c5 \u03c0\u03b5\u03c1\u03b9\u03c0\u03ad\u03c4\u03b5\u03b9\u03b1, \u03b1\u03bd\u03b1\u03b6\u03b7\u03c4\u03ce\u03bd\u03c4\u03b1\u03c2 \u03c4\u03bf One Piece \u03ba\u03b1\u03b9 \u03c0\u03b1\u03c3\u03c7\u03af\u03b6\u03bf\u03bd\u03c4\u03b1\u03c2 \u03bd\u03b1 \u03b3\u03af\u03bd\u03b5\u03b9 \u03bf \u03bd\u03ad\u03bf\u03c2 \u0392\u03b1\u03c3\u03b9\u03bb\u03b9\u03ac\u03c2 \u03c4\u03c9\u03bd \u03a0\u03b5\u03b9\u03c1\u03b1\u03c4\u03ce\u03bd. \u039f\u03c0\u03bb\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03c2 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03ad\u03bd\u03b1 \u03c8\u03ac\u03b8\u03b9\u03bd\u03bf \u03ba\u03b1\u03c0\u03ad\u03bb\u03bf, \u03bc\u03b9\u03b1 \u03bc\u03b9\u03ba\u03c1\u03ae \u03b2\u03ac\u03c1\u03ba\u03b1 \u03ba\u03b1\u03b9 \u03ad\u03bd\u03b1 \u03b5\u03bb\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc \u03c3\u03ce\u03bc\u03b1, \u03be\u03b5\u03ba\u03b9\u03bd\u03ac \u03ad\u03bd\u03b1 \u03c6\u03b1\u03bd\u03c4\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc \u03c4\u03b1\u03be\u03af\u03b4\u03b9 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c3\u03c5\u03b3\u03ba\u03b5\u03bd\u03c4\u03c1\u03ce\u03c3\u03b5\u03b9 \u03c4\u03bf \u03b4\u03b9\u03ba\u03cc \u03c4\u03bf\u03c5 \u03c0\u03bb\u03ae\u03c1\u03c9\u03bc\u03b1 \u03ba\u03b1\u03b9 \u03ad\u03bd\u03b1 \u03ac\u03be\u03b9\u03bf \u03c0\u03bb\u03bf\u03af\u03bf \u03c0\u03bf\u03c5 \u03b8\u03b1 \u03b4\u03b9\u03b1\u03c3\u03c7\u03af\u03c3\u03b5\u03b9 \u03c4\u03b7 \u039c\u03b5\u03b3\u03ac\u03bb\u03b7 \u0393\u03c1\u03b1\u03bc\u03bc\u03ae \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b4\u03b9\u03b5\u03ba\u03b4\u03b9\u03ba\u03ae\u03c3\u03b5\u03b9 \u03c4\u03b7 \u03bc\u03b5\u03b3\u03b1\u03bb\u03cd\u03c4\u03b5\u03c1\u03b7 \u03b8\u03ad\u03c3\u03b7 \u03c3\u03c4\u03b7\u03bd \u03b1\u03bd\u03bf\u03b9\u03c7\u03c4\u03ae \u03b8\u03ac\u03bb\u03b1\u03c3\u03c3\u03b1.",
+                "en": "Gol D. Roger, a man referred to as the \"Pirate King,\" is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the Pirate King is executed and the Great Age of Pirates begins.  \n  \nTwenty years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new Pirate King. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas.\n\n**Note:**  \n**Because a takedown notice was sent to MangaDex from the owners of this series, English fan translations of One Piece are unable to be posted at this time. The series can be read in its entirety at [the official Shonen Jump website,](https://www.viz.com/shonenjump/chapters/one-piece) with the first and latest three chapters available at any time and the rest accessible with a Shonen Jump membership (which costs about $2 a month and can be accessed via a VPN if you are outside the US).**"
+            },
+            "isLocked": false,
+            "links": {
+                "al": "30013",
+                "ap": "one-piece",
+                "bw": "series/12977/list",
+                "kt": "one-piece",
+                "mu": "33",
+                "amz": "https://www.amazon.co.jp/dp/B07QF3VGBS",
+                "ebj": "https://ebookjapan.yahoo.co.jp/books/145222/",
+                "mal": "13",
+                "raw": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=08872509872509325501"
+            },
+            "officialLinks": null,
+            "originalLanguage": "ja",
+            "lastVolume": "",
+            "lastChapter": "",
+            "publicationDemographic": "shounen",
+            "status": "ongoing",
+            "year": 2012,
+            "contentRating": "suggestive",
+            "tags": [
+                {
+                    "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Award Winning"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Sci-Fi"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "320831a8-4026-470b-94f6-8353740e6f04",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Official Colored"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Monsters"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Action"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "3de8c75d-8ee3-48ff-98ee-e20a65c86451",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Animals"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Comedy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "5ca48985-9a9d-4bd8-be29-80dc0303db72",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Crime"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Adventure"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Gore"
+                        },
+                        "description": {},
+                        "group": "content",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Drama"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Fantasy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Supernatural"
+                        },
+                        "description": {},
+                        "group": "theme",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2018-08-06T16:09:41+00:00",
+            "updatedAt": "2025-07-15T11:38:31+00:00",
+            "version": 33,
+            "availableTranslatedLanguages": [
+                "it",
+                "uk",
+                "es-la",
+                "en",
+                "pt-br",
+                "id",
+                "el",
+                "ru",
+                "ar",
+                "tr",
+                "he",
+                "fr"
+            ],
+            "latestUploadedChapter": "247a4c65-ea0b-4f12-b632-ff36fd0f179e"
+        },
+        "relationships": [
+            {
+                "id": "b6045e2c-28f4-4ce0-b4dd-b14070f2f5ae",
+                "type": "author"
+            },
+            {
+                "id": "b6045e2c-28f4-4ce0-b4dd-b14070f2f5ae",
+                "type": "artist"
+            },
+            {
+                "id": "df8780c5-2c6a-4f11-b762-147195d5e593",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "1",
+                    "fileName": "da0341d8-5526-452c-8bd3-dc8e3cd89f99.jpg",
+                    "locale": "ja",
+                    "createdAt": "2022-06-13T17:27:14+00:00",
+                    "updatedAt": "2022-06-13T17:27:14+00:00",
+                    "version": 1
+                }
+            },
+            {
+                "id": "77b55397-d621-462f-8c04-1f450b83fc0d",
+                "type": "manga",
+                "related": "doujinshi"
+            },
+            {
+                "id": "799ca99d-9820-49e5-ac88-bfe31e2803f5",
+                "type": "manga",
+                "related": "side_story"
+            },
+            {
+                "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
+                "type": "manga",
+                "related": "monochrome"
+            }
+        ]
+    },
+    {
         "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
         "type": "manga",
         "attributes": {
@@ -311,19 +599,19 @@
                 "it",
                 "he",
                 "pl",
+                "fr",
                 "tr",
                 "id",
                 "hi",
                 "bg",
                 "mn",
-                "fr",
                 "ro",
                 "eu",
                 "th",
                 "el",
                 "cs"
             ],
-            "latestUploadedChapter": "c757d71d-637e-48db-bcf1-687e7fe1b9a0"
+            "latestUploadedChapter": "08476584-cb49-42ee-a9aa-ba9f3c44d097"
         },
         "relationships": [
             {
@@ -336,7 +624,16 @@
             },
             {
                 "id": "6f79415c-46a3-46c8-92ba-ba519c24e642",
-                "type": "cover_art"
+                "type": "cover_art",
+                "attributes": {
+                    "description": "https://x.com/Eiichiro_Staff/status/1936982798012911836",
+                    "volume": "112",
+                    "fileName": "47c0ee13-e6d5-40c0-bfb9-57b26b2b1d2a.jpg",
+                    "locale": "ja",
+                    "createdAt": "2025-06-23T09:33:58+00:00",
+                    "updatedAt": "2025-06-23T09:33:58+00:00",
+                    "version": 1
+                }
             },
             {
                 "id": "064cbe11-3f80-4ba1-b6a5-6f3e3d8fe3e0",
@@ -741,285 +1038,6 @@
         ]
     },
     {
-        "id": "a2c1d849-af05-4bbc-b2a7-866ebb10331f",
-        "type": "manga",
-        "attributes": {
-            "title": {
-                "en": "One Piece (Official Colored)"
-            },
-            "altTitles": [
-                {
-                    "ru": "\u0412\u0430\u043d \u041f\u0438\u0441"
-                },
-                {
-                    "ar": "\u0648\u0646 \u067e\u06cc\u0633"
-                },
-                {
-                    "zh": "\u6d77\u8d3c\u738b"
-                },
-                {
-                    "ko": "\uc6d0\ud53c\uc2a4"
-                },
-                {
-                    "ja": "ONE PIECE \u30ab\u30e9\u30fc\u7248"
-                },
-                {
-                    "uk": "\u0412\u0430\u043f \u041f\u0456\u0441"
-                },
-                {
-                    "el": "One Piece (\u0395\u03c0\u03af\u03c3\u03b7\u03bc\u03b1 \u0388\u03b3\u03c7\u03c1\u03c9\u03bc\u03bf)"
-                },
-                {
-                    "vi": "\u0110\u1ea3o H\u1ea3i T\u1eb7c"
-                }
-            ],
-            "description": {
-                "el": "\u039f Gol D. Roger, \u03ad\u03bd\u03b1\u03c2 \u03ac\u03bd\u03b8\u03c1\u03c9\u03c0\u03bf\u03c2 \u03c0\u03bf\u03c5 \u03b1\u03bd\u03b1\u03c6\u03ad\u03c1\u03b5\u03c4\u03b1\u03b9 \u03c9\u03c2 \u03bf \u00ab\u0392\u03b1\u03c3\u03b9\u03bb\u03b9\u03ac\u03c2 \u03c4\u03c9\u03bd \u03a0\u03b5\u03b9\u03c1\u03b1\u03c4\u03ce\u03bd\u00bb, \u03c0\u03c1\u03cc\u03ba\u03b5\u03b9\u03c4\u03b1\u03b9 \u03bd\u03b1 \u03b5\u03ba\u03c4\u03b5\u03bb\u03b5\u03c3\u03c4\u03b5\u03af \u03b1\u03c0\u03cc \u03c4\u03b7\u03bd \u03a0\u03b1\u03b3\u03ba\u03cc\u03c3\u03bc\u03b9\u03b1 \u039a\u03c5\u03b2\u03ad\u03c1\u03bd\u03b7\u03c3\u03b7. \u0391\u03bb\u03bb\u03ac \u03bb\u03af\u03b3\u03bf \u03c0\u03c1\u03b9\u03bd \u03c4\u03bf\u03bd \u03b8\u03ac\u03bd\u03b1\u03c4\u03cc \u03c4\u03bf\u03c5, \u03b5\u03c0\u03b9\u03b2\u03b5\u03b2\u03b1\u03b9\u03ce\u03bd\u03b5\u03b9 \u03c4\u03b7\u03bd \u03cd\u03c0\u03b1\u03c1\u03be\u03b7 \u03b5\u03bd\u03cc\u03c2 \u03bc\u03b5\u03b3\u03ac\u03bb\u03bf\u03c5 \u03b8\u03b7\u03c3\u03b1\u03c5\u03c1\u03bf\u03cd, \u03c4\u03bf\u03c5 One Piece, \u03c0\u03bf\u03c5 \u03b2\u03c1\u03af\u03c3\u03ba\u03b5\u03c4\u03b1\u03b9 \u03ba\u03ac\u03c0\u03bf\u03c5 \u03bc\u03ad\u03c3\u03b1 \u03c3\u03c4\u03bf\u03bd \u03b1\u03c0\u03ad\u03c1\u03b1\u03bd\u03c4\u03bf \u03c9\u03ba\u03b5\u03b1\u03bd\u03cc \u03b3\u03bd\u03c9\u03c3\u03c4\u03cc \u03c9\u03c2 \u039c\u03b5\u03b3\u03ac\u03bb\u03b7 \u0393\u03c1\u03b1\u03bc\u03bc\u03ae. \u0391\u03bd\u03b1\u03ba\u03bf\u03b9\u03bd\u03ce\u03bd\u03bf\u03bd\u03c4\u03b1\u03c2 \u03cc\u03c4\u03b9 \u03c4\u03bf One Piece \u03bc\u03c0\u03bf\u03c1\u03b5\u03af \u03bd\u03b1 \u03b4\u03b9\u03b5\u03ba\u03b4\u03b9\u03ba\u03b7\u03b8\u03b5\u03af \u03b1\u03c0\u03cc \u03bf\u03c0\u03bf\u03b9\u03bf\u03bd\u03b4\u03ae\u03c0\u03bf\u03c4\u03b5 \u03ac\u03be\u03b9\u03bf \u03bd\u03b1 \u03c4\u03bf \u03c6\u03c4\u03ac\u03c3\u03b5\u03b9, \u03bf \u0392\u03b1\u03c3\u03b9\u03bb\u03b9\u03ac\u03c2 \u03c4\u03c9\u03bd \u03a0\u03b5\u03b9\u03c1\u03b1\u03c4\u03ce\u03bd \u03b5\u03ba\u03c4\u03b5\u03bb\u03b5\u03af\u03c4\u03b1\u03b9 \u03ba\u03b1\u03b9 \u03b7 \u039c\u03b5\u03b3\u03ac\u03bb\u03b7 \u0395\u03c0\u03bf\u03c7\u03ae \u03c4\u03c9\u03bd \u03a0\u03b5\u03b9\u03c1\u03b1\u03c4\u03ce\u03bd \u03be\u03b5\u03ba\u03b9\u03bd\u03ac. \u0395\u03af\u03ba\u03bf\u03c3\u03b9 \u03c7\u03c1\u03cc\u03bd\u03b9\u03b1 \u03b1\u03c1\u03b3\u03cc\u03c4\u03b5\u03c1\u03b1, \u03ad\u03bd\u03b1\u03c2 \u03bd\u03b5\u03b1\u03c1\u03cc\u03c2 \u03bc\u03b5 \u03c4\u03bf \u03cc\u03bd\u03bf\u03bc\u03b1 Monkey D. Luffy \u03b5\u03af\u03bd\u03b1\u03b9 \u03ad\u03c4\u03bf\u03b9\u03bc\u03bf\u03c2 \u03bd\u03b1 \u03be\u03b5\u03ba\u03b9\u03bd\u03ae\u03c3\u03b5\u03b9 \u03c4\u03b7 \u03b4\u03b9\u03ba\u03ae \u03c4\u03bf\u03c5 \u03c0\u03b5\u03c1\u03b9\u03c0\u03ad\u03c4\u03b5\u03b9\u03b1, \u03b1\u03bd\u03b1\u03b6\u03b7\u03c4\u03ce\u03bd\u03c4\u03b1\u03c2 \u03c4\u03bf One Piece \u03ba\u03b1\u03b9 \u03c0\u03b1\u03c3\u03c7\u03af\u03b6\u03bf\u03bd\u03c4\u03b1\u03c2 \u03bd\u03b1 \u03b3\u03af\u03bd\u03b5\u03b9 \u03bf \u03bd\u03ad\u03bf\u03c2 \u0392\u03b1\u03c3\u03b9\u03bb\u03b9\u03ac\u03c2 \u03c4\u03c9\u03bd \u03a0\u03b5\u03b9\u03c1\u03b1\u03c4\u03ce\u03bd. \u039f\u03c0\u03bb\u03b9\u03c3\u03bc\u03ad\u03bd\u03bf\u03c2 \u03bc\u03cc\u03bd\u03bf \u03bc\u03b5 \u03ad\u03bd\u03b1 \u03c8\u03ac\u03b8\u03b9\u03bd\u03bf \u03ba\u03b1\u03c0\u03ad\u03bb\u03bf, \u03bc\u03b9\u03b1 \u03bc\u03b9\u03ba\u03c1\u03ae \u03b2\u03ac\u03c1\u03ba\u03b1 \u03ba\u03b1\u03b9 \u03ad\u03bd\u03b1 \u03b5\u03bb\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc \u03c3\u03ce\u03bc\u03b1, \u03be\u03b5\u03ba\u03b9\u03bd\u03ac \u03ad\u03bd\u03b1 \u03c6\u03b1\u03bd\u03c4\u03b1\u03c3\u03c4\u03b9\u03ba\u03cc \u03c4\u03b1\u03be\u03af\u03b4\u03b9 \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03c3\u03c5\u03b3\u03ba\u03b5\u03bd\u03c4\u03c1\u03ce\u03c3\u03b5\u03b9 \u03c4\u03bf \u03b4\u03b9\u03ba\u03cc \u03c4\u03bf\u03c5 \u03c0\u03bb\u03ae\u03c1\u03c9\u03bc\u03b1 \u03ba\u03b1\u03b9 \u03ad\u03bd\u03b1 \u03ac\u03be\u03b9\u03bf \u03c0\u03bb\u03bf\u03af\u03bf \u03c0\u03bf\u03c5 \u03b8\u03b1 \u03b4\u03b9\u03b1\u03c3\u03c7\u03af\u03c3\u03b5\u03b9 \u03c4\u03b7 \u039c\u03b5\u03b3\u03ac\u03bb\u03b7 \u0393\u03c1\u03b1\u03bc\u03bc\u03ae \u03b3\u03b9\u03b1 \u03bd\u03b1 \u03b4\u03b9\u03b5\u03ba\u03b4\u03b9\u03ba\u03ae\u03c3\u03b5\u03b9 \u03c4\u03b7 \u03bc\u03b5\u03b3\u03b1\u03bb\u03cd\u03c4\u03b5\u03c1\u03b7 \u03b8\u03ad\u03c3\u03b7 \u03c3\u03c4\u03b7\u03bd \u03b1\u03bd\u03bf\u03b9\u03c7\u03c4\u03ae \u03b8\u03ac\u03bb\u03b1\u03c3\u03c3\u03b1.",
-                "en": "Gol D. Roger, a man referred to as the \"Pirate King,\" is set to be executed by the World Government. But just before his demise, he confirms the existence of a great treasure, One Piece, located somewhere within the vast ocean known as the Grand Line. Announcing that One Piece can be claimed by anyone worthy enough to reach it, the Pirate King is executed and the Great Age of Pirates begins.  \n  \nTwenty years later, a young man by the name of Monkey D. Luffy is ready to embark on his own adventure, searching for One Piece and striving to become the new Pirate King. Armed with just a straw hat, a small boat, and an elastic body, he sets out on a fantastic journey to gather his own crew and a worthy ship that will take them across the Grand Line to claim the greatest status on the high seas.\n\n**Note:**  \n**Because a takedown notice was sent to MangaDex from the owners of this series, English fan translations of One Piece are unable to be posted at this time. The series can be read in its entirety at [the official Shonen Jump website,](https://www.viz.com/shonenjump/chapters/one-piece) with the first and latest three chapters available at any time and the rest accessible with a Shonen Jump membership (which costs about $2 a month and can be accessed via a VPN if you are outside the US).**"
-            },
-            "isLocked": false,
-            "links": {
-                "al": "30013",
-                "ap": "one-piece",
-                "bw": "series/12977/list",
-                "kt": "one-piece",
-                "mu": "33",
-                "amz": "https://www.amazon.co.jp/dp/B07QF3VGBS",
-                "ebj": "https://ebookjapan.yahoo.co.jp/books/145222/",
-                "mal": "13",
-                "raw": "https://www.shueisha.co.jp/books/items/contents.html?jdcn=08872509872509325501"
-            },
-            "officialLinks": null,
-            "originalLanguage": "ja",
-            "lastVolume": "",
-            "lastChapter": "",
-            "publicationDemographic": "shounen",
-            "status": "ongoing",
-            "year": 2012,
-            "contentRating": "suggestive",
-            "tags": [
-                {
-                    "id": "0a39b5a1-b235-4886-a747-1d05d216532d",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Award Winning"
-                        },
-                        "description": {},
-                        "group": "format",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "256c8bd9-4904-4360-bf4f-508a76d67183",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Sci-Fi"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "320831a8-4026-470b-94f6-8353740e6f04",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Official Colored"
-                        },
-                        "description": {},
-                        "group": "format",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "36fd93ea-e8b8-445e-b836-358f02b3d33d",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Monsters"
-                        },
-                        "description": {},
-                        "group": "theme",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Action"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "3de8c75d-8ee3-48ff-98ee-e20a65c86451",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Animals"
-                        },
-                        "description": {},
-                        "group": "theme",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Comedy"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "5ca48985-9a9d-4bd8-be29-80dc0303db72",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Crime"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Adventure"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "b29d6a3d-1569-4e7a-8caf-7557bc92cd5d",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Gore"
-                        },
-                        "description": {},
-                        "group": "content",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Drama"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Fantasy"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "eabc5b4c-6aff-42f3-b657-3e90cbd00b75",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Supernatural"
-                        },
-                        "description": {},
-                        "group": "theme",
-                        "version": 1
-                    },
-                    "relationships": []
-                }
-            ],
-            "state": "published",
-            "chapterNumbersResetOnNewVolume": false,
-            "createdAt": "2018-08-06T16:09:41+00:00",
-            "updatedAt": "2025-07-15T11:38:31+00:00",
-            "version": 33,
-            "availableTranslatedLanguages": [
-                "it",
-                "uk",
-                "es-la",
-                "en",
-                "pt-br",
-                "id",
-                "el",
-                "ru",
-                "ar",
-                "tr",
-                "he",
-                "fr"
-            ],
-            "latestUploadedChapter": "ddacc8e3-ef7c-43bf-97c0-3284309058fc"
-        },
-        "relationships": [
-            {
-                "id": "b6045e2c-28f4-4ce0-b4dd-b14070f2f5ae",
-                "type": "author"
-            },
-            {
-                "id": "b6045e2c-28f4-4ce0-b4dd-b14070f2f5ae",
-                "type": "artist"
-            },
-            {
-                "id": "df8780c5-2c6a-4f11-b762-147195d5e593",
-                "type": "cover_art"
-            },
-            {
-                "id": "77b55397-d621-462f-8c04-1f450b83fc0d",
-                "type": "manga",
-                "related": "doujinshi"
-            },
-            {
-                "id": "799ca99d-9820-49e5-ac88-bfe31e2803f5",
-                "type": "manga",
-                "related": "side_story"
-            },
-            {
-                "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
-                "type": "manga",
-                "related": "monochrome"
-            }
-        ]
-    },
-    {
         "id": "b70113a5-32a3-44e8-a28f-0e88392808ba",
         "type": "manga",
         "attributes": {
@@ -1057,6 +1075,7 @@
                 "mal": "122305",
                 "raw": "https://shonenjumpplus.com/episode/3269754496842971420"
             },
+            "officialLinks": null,
             "originalLanguage": "ja",
             "lastVolume": "",
             "lastChapter": "",
@@ -1173,7 +1192,16 @@
             },
             {
                 "id": "048f61c3-30be-44bf-b1cb-48cff435db5a",
-                "type": "cover_art"
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "10",
+                    "fileName": "1c4ef1b3-d8ae-46d6-9336-39d0abc37b70.jpg",
+                    "locale": "ja",
+                    "createdAt": "2025-07-04T07:04:40+00:00",
+                    "updatedAt": "2025-07-04T07:04:40+00:00",
+                    "version": 1
+                }
             },
             {
                 "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
@@ -1215,6 +1243,7 @@
                 "amz": "https://www.amazon.co.jp/gp/product/B074CLYRVX/",
                 "mal": "86972"
             },
+            "officialLinks": null,
             "originalLanguage": "ja",
             "lastVolume": "7",
             "lastChapter": "34",
@@ -1287,7 +1316,16 @@
             },
             {
                 "id": "d3931a80-8794-4fe4-ac3f-c9fb2a99ad7b",
-                "type": "cover_art"
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": null,
+                    "fileName": "cd133b2a-c268-44b5-a238-799645ddd51c.jpg",
+                    "locale": "ja",
+                    "createdAt": "2021-05-24T16:49:04+00:00",
+                    "updatedAt": "2021-05-24T16:49:04+00:00",
+                    "version": 1
+                }
             },
             {
                 "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
@@ -1500,7 +1538,16 @@
             },
             {
                 "id": "3fc58e93-8808-4f00-abe8-9e7104c465d8",
-                "type": "cover_art"
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": null,
+                    "fileName": "3c3921b0-8c25-44e0-b776-64eeffb9bb36.jpg",
+                    "locale": "ja",
+                    "createdAt": "2021-05-24T18:22:06+00:00",
+                    "updatedAt": "2021-05-24T18:22:06+00:00",
+                    "version": 1
+                }
             },
             {
                 "id": "40bc649f-7b49-4645-859e-6cd94136e722",
@@ -1511,6 +1558,131 @@
                 "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
                 "type": "manga",
                 "related": "adapted_from"
+            }
+        ]
+    },
+    {
+        "id": "fc4eccf5-5fe6-49de-b12c-4124fcea4e16",
+        "type": "manga",
+        "attributes": {
+            "title": {
+                "en": "One Piece Romance Dawn V.1"
+            },
+            "altTitles": [
+                {
+                    "ja": "ROMANCE DAWN - \u30ed\u30de\u30f3\u30b9 \u30c9\u30fc\u30f3"
+                },
+                {
+                    "ja-ro": "Romansu D\u014dn"
+                }
+            ],
+            "description": {},
+            "isLocked": false,
+            "links": {
+                "amz": "https://www.amazon.com/-/es/One-Piece-Gu\u00eda-Red-Characters/dp/8415480709"
+            },
+            "officialLinks": null,
+            "originalLanguage": "ja",
+            "lastVolume": "",
+            "lastChapter": "",
+            "publicationDemographic": "shounen",
+            "status": "completed",
+            "year": 1996,
+            "contentRating": "safe",
+            "tags": [
+                {
+                    "id": "0234a31e-a729-4e28-9d6a-3f87c4966b9e",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Oneshot"
+                        },
+                        "description": {},
+                        "group": "format",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Action"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Comedy"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                },
+                {
+                    "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
+                    "type": "tag",
+                    "attributes": {
+                        "name": {
+                            "en": "Adventure"
+                        },
+                        "description": {},
+                        "group": "genre",
+                        "version": 1
+                    },
+                    "relationships": []
+                }
+            ],
+            "state": "published",
+            "chapterNumbersResetOnNewVolume": false,
+            "createdAt": "2025-01-21T14:31:10+00:00",
+            "updatedAt": "2025-07-28T18:31:41+00:00",
+            "version": 4,
+            "availableTranslatedLanguages": [
+                "es-la"
+            ],
+            "latestUploadedChapter": "7cc29c8a-3835-42e0-9a6d-bad9237cedc3"
+        },
+        "relationships": [
+            {
+                "id": "3cca07a7-d4c3-44f5-b7ad-9d57df9018da",
+                "type": "author"
+            },
+            {
+                "id": "3cca07a7-d4c3-44f5-b7ad-9d57df9018da",
+                "type": "artist"
+            },
+            {
+                "id": "a5f9e5da-a07a-4214-b7e1-c45a6645f5da",
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "1",
+                    "fileName": "98b96344-96a5-46b0-aad2-e3eb8303a1b1.png",
+                    "locale": "ja",
+                    "createdAt": "2025-01-21T14:31:14+00:00",
+                    "updatedAt": "2025-01-21T14:31:14+00:00",
+                    "version": 1
+                }
+            },
+            {
+                "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
+                "type": "manga",
+                "related": "alternate_version"
+            },
+            {
+                "id": "d06bb254-8590-4987-a0e6-a13835abe916",
+                "type": "creator"
             }
         ]
     },
@@ -1692,7 +1864,16 @@
             },
             {
                 "id": "93054536-afcc-41ac-bcbf-1c863da03e0a",
-                "type": "cover_art"
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "2",
+                    "fileName": "8ce05da3-37a8-4481-be16-1647081a1b07.jpg",
+                    "locale": "ja",
+                    "createdAt": "2023-04-24T09:24:39+00:00",
+                    "updatedAt": "2023-04-24T09:24:39+00:00",
+                    "version": 1
+                }
             },
             {
                 "id": "799ca99d-9820-49e5-ac88-bfe31e2803f5",
@@ -1817,7 +1998,16 @@
             },
             {
                 "id": "3b441fd3-023d-4f96-9e58-e11312421f45",
-                "type": "cover_art"
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "0",
+                    "fileName": "6e03d6af-0c53-452d-9c58-21aa7374dab9.jpg",
+                    "locale": "ja",
+                    "createdAt": "2021-05-23T08:05:22+00:00",
+                    "updatedAt": "2021-05-23T08:05:22+00:00",
+                    "version": 2
+                }
             },
             {
                 "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
@@ -1981,7 +2171,16 @@
             },
             {
                 "id": "8f704722-c8c6-4deb-af0b-b603c2c3d5e5",
-                "type": "cover_art"
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": null,
+                    "fileName": "56f6198b-ea81-4ff8-9a59-0bc0568366ab.jpg",
+                    "locale": "ja",
+                    "createdAt": "2023-06-26T10:43:55+00:00",
+                    "updatedAt": "2024-08-05T16:56:40+00:00",
+                    "version": 2
+                }
             },
             {
                 "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
@@ -2141,7 +2340,16 @@
             },
             {
                 "id": "062a9f7b-cafe-4421-bc95-26d99532bdf7",
-                "type": "cover_art"
+                "type": "cover_art",
+                "attributes": {
+                    "description": "",
+                    "volume": "106",
+                    "fileName": "ea753c55-8162-457b-825f-fe41e734e58b.png",
+                    "locale": "ja",
+                    "createdAt": "2023-08-14T17:10:36+00:00",
+                    "updatedAt": "2023-08-14T17:10:36+00:00",
+                    "version": 1
+                }
             },
             {
                 "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
@@ -2150,162 +2358,6 @@
             },
             {
                 "id": "81f8e62d-e912-4ae0-8a5a-9c7400cc76ae",
-                "type": "creator"
-            }
-        ]
-    },
-    {
-        "id": "8fe239cd-668a-428d-8735-ad85aa486ed5",
-        "type": "manga",
-        "attributes": {
-            "title": {
-                "en": "One Piece: The World After The War"
-            },
-            "altTitles": [
-                {
-                    "pt-br": "Optwatw"
-                }
-            ],
-            "description": {
-                "pt-br": "Perry D. Greening \u00e9 um homem que viu a oportunidade de se tornar o Rei dos Piratas 6 meses depois da Guerra dos Melhores e da not\u00edcia da morte de Ace, Barba Branca e dos Chap\u00e9us de Palha. Perry passa por ilhas no East Blue recrutando pessoas para sua tripula\u00e7\u00e3o e partir para a Grand Line, o mar onde est\u00e3o os maiores piratas do mundo."
-            },
-            "isLocked": false,
-            "links": {
-                "raw": "https://tapas.io/series/One-Piece-The-World-After-The-War/info"
-            },
-            "originalLanguage": "pt-br",
-            "lastVolume": "",
-            "lastChapter": "",
-            "publicationDemographic": null,
-            "status": "ongoing",
-            "year": 2023,
-            "contentRating": "safe",
-            "tags": [
-                {
-                    "id": "391b0423-d847-456f-aff0-8b0cfc03066b",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Action"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "4d32cc48-9f00-4cca-9b5a-a839f0764984",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Comedy"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "87cc87cd-a395-47af-b27a-93258283bbc6",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Adventure"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "891cf039-b895-47f0-9229-bef4c96eccd4",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Self-Published"
-                        },
-                        "description": {},
-                        "group": "format",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "b9af3a63-f058-46de-a9a0-e0c13906197a",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Drama"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                },
-                {
-                    "id": "cdc58593-87dd-415e-bbc0-2ec27bf404cc",
-                    "type": "tag",
-                    "attributes": {
-                        "name": {
-                            "en": "Fantasy"
-                        },
-                        "description": {},
-                        "group": "genre",
-                        "version": 1
-                    },
-                    "relationships": []
-                }
-            ],
-            "state": "published",
-            "chapterNumbersResetOnNewVolume": false,
-            "createdAt": "2023-03-26T01:18:56+00:00",
-            "updatedAt": "2023-06-16T11:52:43+00:00",
-            "version": 6,
-            "availableTranslatedLanguages": [
-                "pt-br"
-            ],
-            "latestUploadedChapter": "727504c9-93e8-48a4-826d-acafd9ec6002"
-        },
-        "relationships": [
-            {
-                "id": "0ebb5d28-34b2-482f-8833-333eb7ae3d0e",
-                "type": "author"
-            },
-            {
-                "id": "5b735176-757f-45d2-964d-09f793b9edb1",
-                "type": "author"
-            },
-            {
-                "id": "8899c0b7-7a30-47b5-a2f0-93ca116c465c",
-                "type": "author"
-            },
-            {
-                "id": "ea969858-1fff-4bbd-abd7-3fce552524c2",
-                "type": "author"
-            },
-            {
-                "id": "f4abb33e-fb95-47d4-abe0-30e8354cfc8d",
-                "type": "author"
-            },
-            {
-                "id": "0ebb5d28-34b2-482f-8833-333eb7ae3d0e",
-                "type": "artist"
-            },
-            {
-                "id": "bb29cf48-ae6c-40fd-8687-d4fb2126c554",
-                "type": "cover_art"
-            },
-            {
-                "id": "a1c7c817-4e59-43b7-9365-09675a149a6f",
-                "type": "manga",
-                "related": "based_on"
-            },
-            {
-                "id": "f77984be-50ef-4fa8-b46e-d6bdf8b8b63a",
                 "type": "creator"
             }
         ]
