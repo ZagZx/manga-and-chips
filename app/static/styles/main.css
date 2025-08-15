@@ -46,6 +46,22 @@ main{
     min-height: 80vh;
 }
 
+button{
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1em;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.break{
+    height: 1px;
+    background-color: #4b5563;
+}
+
 .anchor-hover:hover{
     transition:all 0.2s ease;
     color: #ef4444;
