@@ -10,6 +10,7 @@ from typing import Union
 class Manga:
     BASE_URL = 'https://api.mangadex.org'
     BASE_UPLOADS_URL = 'https://uploads.mangadex.org'
+    
 
     def __init__(self, id:str):
         self.id = id

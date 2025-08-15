@@ -4,7 +4,11 @@ BASE_URL = 'https://api.mangadex.org'
 
 def search_manga_by_title(title:str) -> list[dict]:
     try:
-        return requests.get(f'{BASE_URL}/manga?title={title}').json()['data']
+        payload = {
+            'title':title,
+            'contentRating[]': ['safe', 'suggestive']
+        }
+        return requests.get(f'{BASE_URL}/manga', params=payload).json()['data']
     except Exception as e:
         print(f'Erro ao pesquisar mangás: {e}')
         return []
