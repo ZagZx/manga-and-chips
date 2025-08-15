@@ -60,7 +60,7 @@
             
         <nav class="horizontal-nav">
             <a class="anchor-hover" href="{{ url_for('index.index') }}">Início</a>
-            <a class="anchor-hover" href="{{ url_for('library.library_view') }}">Biblioteca</a>
+            <a class="anchor-hover" href="{{ url_for('user.library_view') }}">Biblioteca</a>
             <a class="anchor-hover" href="#">Categorias</a>
 
         </nav>
@@ -78,7 +78,7 @@
                 <div id="menu-content" class="vertical-nav">
                     {% if current_user.id %}
                         <p style="border-bottom: 1px solid white; padding-bottom:0.5em">{{current_user.username}}</p>
-                        <a class="anchor-hover" href="">Preferências</a>
+                        <a class="anchor-hover" href="{{ url_for('user.settings') }}">Configurações</a>
                         <a class="anchor-hover" href="{{ url_for('auth.logout') }}">Sair</a>
                     {% else %}
                         <a class="anchor-hover" href="{{ url_for('auth.login') }}">Login</a>

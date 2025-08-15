@@ -1,13 +1,13 @@
-from flask import Blueprint, redirect, url_for, current_app, request, render_template
+from flask import redirect, url_for, current_app, request, render_template
 from flask_login import login_required, current_user
 
-from app.models import user, UserLibrary
+from app.models import UserLibrary
 from app import db
 
-lib_bp = Blueprint('library', __name__, url_prefix='/library')
+from . import user_bp
 
 
-@lib_bp.route('/')
+@user_bp.route('/library')
 @login_required
 def library_view():
     library:list[UserLibrary] = UserLibrary.query.filter_by(user_id=current_user.id).all()
@@ -19,7 +19,7 @@ def library_view():
     return render_template('library.html', library_list=library_list)
 
 
-@lib_bp.route('/add', methods = ['POST'])
+@user_bp.route('/library/add', methods = ['POST'])
 @login_required
 def add_to_library():
     print(request.form.keys())
@@ -31,11 +31,11 @@ def add_to_library():
         db.session.add(UserLibrary(manga_id=manga_id, user_id=current_user.id))
         db.session.commit()
         
-    return redirect(url_for('library.library_view'))
+    return redirect(url_for('user.library_view'))
 
-@lib_bp.route('/remove', methods = ['POST'])
+@user_bp.route('/library/remove', methods = ['POST'])
 @login_required
-def remove():
+def remove_from_library():
     keys = list(request.form.keys())
     manga_id = keys[0]
 
@@ -49,4 +49,4 @@ def remove():
             print(e)
             db.session.rollback()
             db.session.remove()
-    return redirect(url_for('library.library_view'))
+    return redirect(url_for('user.library_view'))
