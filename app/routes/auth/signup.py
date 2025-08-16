@@ -2,7 +2,7 @@ from flask import request, redirect, url_for, render_template, current_app
 from werkzeug.security import generate_password_hash
 
 from . import auth_bp
-from app.models import User
+from app.models import User, UserSettings
 from app import db
 
 @auth_bp.route('/signup', methods=['GET', 'POST'])
@@ -18,7 +18,10 @@ def signup():
 
         else: 
             with current_app.app_context():
-                db.session.add(User(username=username, email=email, password_hash=password_hash))
+                user:User = User(username=username, email=email, password_hash=password_hash)
+                db.session.add(user)
+                db.session.flush()
+                db.session.add(UserSettings(user_id=user.id))
                 db.session.commit()
             return redirect(url_for('auth.login'))
     if request.method == 'GET':
