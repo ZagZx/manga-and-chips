@@ -10,7 +10,7 @@ Configurações
 {% endblock head %}
 
 {% block main %}    
-    <form action="" method="post">
+    <form action="{{ url_for('user.update_settings') }}" method="post">
         <div class="form-card">
             
             <h1>Configurações de Usuário</h1>
@@ -23,22 +23,22 @@ Configurações
             <h3>Filtro de conteúdo:</h3>
 
             <div>
-                <input type="checkbox" name="safe" id="safe">
+                <input {% if filters['safe'] %}checked{% endif %} type="checkbox" name="safe" id="safe">
                 <label for="safe">Seguro</label>
             </div>
 
             <div>
-                <input type="checkbox" name="suggestive" id="suggestive">
+                <input {% if filters['suggestive'] %}checked{% endif %} type="checkbox" name="suggestive" id="suggestive">
                 <label for="suggestive">Sugestivo / Violento</label>
             </div>
 
             <div>
-                <input type="checkbox" name="erotica" id="erotica">
+                <input {% if filters['erotica'] %}checked{% endif %} type="checkbox" name="erotica" id="erotica">
                 <label for="erotica">Erótico</label>
             </div>
 
             <div>
-                <input type="checkbox" name="pornographic" id="pornographic">
+                <input {% if filters['pornographic'] %}checked{% endif %} type="checkbox" name="pornographic" id="pornographic">
                 <label for="pornographic">Pornográfico</label>
             </div>
 
