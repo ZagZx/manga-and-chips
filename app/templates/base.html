@@ -12,37 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="{{ url_for('static', filename='assets/book.ico') }}" type="image/x-icon">
 
+    <script src="{{ url_for('static', filename='scripts/dropMenu.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/mainHeight.js') }}"></script>
     <script>
-        function dropMenu(){
-            const menu = document.getElementById('menu-content')
-            const logo = document.getElementById('user-logo')
-            
-            if (menu.style.display == 'flex'){
-                menu.style.display = 'none'
-                logo.style.color = ''
-                console.log('virou none')
-            }
-            else{
-                menu.style.display = 'flex'
-                logo.style.color = '#ef4444'
-
-                console.log('virou flex')
-            }
-        }
-    </script>
-
-    <script>
-        function initMainHeight(){
-            const body = document.querySelector('body')
-            const header = document.querySelector('header')
-            const main = document.querySelector('main')
-            const footer = document.querySelector('footer')
-            
-            main.style.paddingTop = header.offsetHeight + 'px'
-            main.style.minHeight = body.offsetHeight + 'px'
-            main.style.paddingBottom = footer.offsetHeight + 'px'
-        }
-
         document.addEventListener('DOMContentLoaded', initMainHeight)
         window.addEventListener('resize', initMainHeight)
         window.addEventListener('')
@@ -85,8 +57,6 @@
                         <a class="anchor-hover" href="{{ url_for('auth.login') }}">Login</a>
                         <a class="anchor-hover" href="{{ url_for('auth.signup') }}">Cadastro</a>
                     {% endif %}
-
-                    
                 </div>
             </div>
         </div>
