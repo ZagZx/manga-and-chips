@@ -16,11 +16,11 @@
 
 ### Semana 3 (18/07–24/07)
 - [ ] Implementar CRUD do recurso escolhido:
-    - [ ] Criar
-    - [ ] Listar
+    - [x] Criar
+    - [x] Listar
     - [ ] Editar
-    - [ ] Excluir
-- [ ] Restrição de acesso: cada usuário só pode ver/editar/excluir seus dados
+    - [x] Excluir
+- [x] Restrição de acesso: cada usuário só pode ver/editar/excluir seus dados
 
 ### Semana 4 (25/07–31/07)
 - [ ] Uso refinado de Flask:
