@@ -1,3 +1,13 @@
+header{
+    display: flex;
+    position: fixed;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+    background-color: #1f2937;
+}
+
 #logo{
     color: #ef4444;
     font-size: 1.5rem;

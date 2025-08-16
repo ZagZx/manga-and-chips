@@ -4,19 +4,18 @@
 
 {% block head %}
 {{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='styles/auth.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/form-page.css') }}">
 
 {% endblock head %}
 
 {% block main %}
 <form action="{{ url_for('auth.signup') }}" method="post">
-
-    <div class="auth-form">
+    <div class="form-card">
         <h1>Cadastrar-se</h1>
 
         <div class="input-container">
             <label for="username">Nome de usuário</label>
-            <input type="username" name="username" id="username" placeholder="John Doe">
+            <input type="text" name="username" id="username" placeholder="John Doe">
         </div>
         <div class="input-container">
             <label for="email">Email</label>

@@ -4,8 +4,48 @@
 Configurações
 {% endblock title %}
 
-{% block main %}
-    <p>Trocar senha</p>
-    <p>Filtro de conteúdo</p>
-    <p>Deletar conta</p>
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/form-page.css') }}">
+{% endblock head %}
+
+{% block main %}    
+    <form action="" method="post">
+        <div class="form-card">
+            
+            <h1>Configurações de Usuário</h1>
+
+            <button type="button" style="background-color: rgb(12, 66, 128);">Trocar senha</button>
+            <button type="button">Deletar conta</button>
+
+            <div class="break"></div>
+
+            <h3>Filtro de conteúdo:</h3>
+
+            <div>
+                <input type="checkbox" name="safe" id="safe">
+                <label for="safe">Seguro</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="suggestive" id="suggestive">
+                <label for="suggestive">Sugestivo / Violento</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="erotica" id="erotica">
+                <label for="erotica">Erótico</label>
+            </div>
+
+            <div>
+                <input type="checkbox" name="pornographic" id="pornographic">
+                <label for="pornographic">Pornográfico</label>
+            </div>
+
+            <div class="break"></div>
+
+            <button type="submit" style="background-color: rgb(47, 116, 2);">Salvar</button>
+        </div>
+    </form>
+
 {% endblock main %}

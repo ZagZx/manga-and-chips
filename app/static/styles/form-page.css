@@ -4,7 +4,7 @@ main{
     align-items: center;
 }
 
-.auth-form{
+.form-card{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,34 +17,36 @@ main{
     border-radius: 0.5em;
 }
 
-.auth-form > *{
+.form-card > *{
     width: 100%;
 }
 
-.auth-form button{
+.form-card button{
     background-color: #ef4444;
     font-weight: bold;
     border-radius: 0.3em;
     padding: 0.7em 0;
 }
 
+.form-card a{
+    color: #ef4444;
+}
 
+.form-card span, .form-card h1{
+    text-align: center;
+}
 
-.auth-form input{
+.form-card ::placeholder{
+    color: #9ca3af;
+}
+
+.input-container input{
     background-color: #374151;
     height: 3em;
     outline: none;
     border: 1px solid #4b5563;
     border-radius: 0.7em;
     padding: 0.5em;
-}
-
-.auth-form a{
-    color: #ef4444;
-}
-
-.auth-form span, .auth-form h1{
-    text-align: center;
 }
 
 .input-container{
@@ -57,8 +59,4 @@ main{
 }
 .input-container:has(input:focus) label{
     color: #ef4444;
-}
-
-.auth-form ::placeholder{
-    color: #9ca3af;
 }

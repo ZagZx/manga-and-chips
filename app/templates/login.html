@@ -4,12 +4,12 @@
 
 {% block head %}
 {{ super() }}
-<link rel="stylesheet" href="{{ url_for('static', filename='styles/auth.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/form-page.css') }}">
 {% endblock head %}
 
 {% block main %}
 <form action="{{ url_for('auth.login') }}" method="post">
-    <div class="auth-form">
+    <div class="form-card">
         
         <h1>Iniciar Sessão</h1>
 
