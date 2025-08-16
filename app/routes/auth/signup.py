@@ -17,12 +17,12 @@ def signup():
             return render_template('register.html') # colocar mensagem de erro
 
         else: 
-            with current_app.app_context():
-                user:User = User(username=username, email=email, password_hash=password_hash)
-                db.session.add(user)
-                db.session.flush()
-                db.session.add(UserSettings(user_id=user.id))
-                db.session.commit()
+            user:User = User(username=username, email=email, password_hash=password_hash)
+            db.session.add(user)
+            db.session.flush()
+            db.session.add(UserSettings(user_id=user.id))
+            db.session.commit()
+            
             return redirect(url_for('auth.login'))
     if request.method == 'GET':
         return render_template('register.html')
