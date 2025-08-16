@@ -21,17 +21,6 @@ main{
     width: 100%;
 }
 
-.form-card button{
-    background-color: #ef4444;
-    font-weight: bold;
-    border-radius: 0.3em;
-    padding: 0.7em 0;
-}
-
-.form-card a{
-    color: #ef4444;
-}
-
 .form-card span, .form-card h1{
     text-align: center;
 }

@@ -27,11 +27,11 @@
             <input type="password" name="password" id="password" placeholder="*******">
         </div>
         
-        <button type="submit">Cadastrar</button>
+        <button class="button" type="submit">Cadastrar</button>
 
         <div class="break"></div>
 
-        <span>Já possui uma conta? <a href="{{ url_for('auth.login') }}">Faça login</a></span>
+        <span>Já possui uma conta? <a class="link" href="{{ url_for('auth.login') }}">Faça login</a></span>
     </div>
  </form>
 {% endblock main %}

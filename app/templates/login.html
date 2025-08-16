@@ -23,11 +23,11 @@
             <input type="password" name="password" id="password" placeholder="*******">
         </div>
         
-        <button type="submit">Entrar</button>
+        <button class="button" type="submit">Entrar</button>
 
         <div class="break"></div>
 
-        <span>Não tem uma conta ainda? <a href="{{ url_for('auth.signup') }}">Cadastre-se</a></span>
+        <span>Não tem uma conta ainda? <a class="link" href="{{ url_for('auth.signup') }}">Cadastre-se</a></span>
     </div>
 </form>
 {% endblock main %}

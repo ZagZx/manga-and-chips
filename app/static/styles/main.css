@@ -40,6 +40,27 @@ button:hover{
     background-color: #4b5563;
 }
 
+.link{
+    color: #ef4444;
+}
+
+.button{
+    text-align: center;
+    background-color: #ef4444;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.3em;
+    padding: 0.7em 0;
+}
+
+.bg-blue{
+    background-color: rgb(12, 66, 128);
+}
+
+.bg-green{
+    background-color: rgb(47, 116, 2);
+}
+
 .anchor-hover:hover{
     transition:all 0.2s ease;
     color: #ef4444;
