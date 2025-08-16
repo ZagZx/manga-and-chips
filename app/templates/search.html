@@ -2,11 +2,8 @@
 
 {% block title %} {{ request.args.get('query') }} {% endblock title %}
 
-
 {% block main %}
-
-
-<form action="{{ url_for('library.add_to_library') }}" method="post">
+<form action="{{ url_for('user.add_to_library') }}" method="post">
     <div class="container">
         {% for manga in mangas_list %}
         <div class="card">
