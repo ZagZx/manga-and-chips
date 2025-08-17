@@ -6,6 +6,8 @@
 }
 
 body{
+    display: flex;
+    flex-direction: column;
     position: relative;
     background-color: #111827;
     width: 100vw;
@@ -13,7 +15,7 @@ body{
 }
 
 main{
-    min-height: 80vh;
+    flex: 1;
 }
 
 label{
