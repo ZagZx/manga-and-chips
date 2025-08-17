@@ -3,6 +3,7 @@ from flask_login import login_required, current_user
 
 from app.models import UserLibrary
 from app import db
+from app.api import Manga
 
 from . import user_bp
 
@@ -12,11 +13,20 @@ from . import user_bp
 def library_view():
     library:list[UserLibrary] = UserLibrary.query.filter_by(user_id=current_user.id).all()
     
-    library_list = []
+    mangas = []
+
+    # trava a rota pois faz a requisição do manga_data de todos os mangás ao chamar o manga.title
     for row in library:
-        library_list.append(row.manga_id)
+        
+        manga = Manga(row.manga_id) 
+
+        mangas.append({
+            'id':manga.id,
+            'title':manga.title,
+            'cover_image': url_for('proxy.cover', manga_id=manga.id, filename=manga.cover_filename)
+        })
     
-    return render_template('library.html', library_list=library_list)
+    return render_template('library.html', mangas=mangas)
 
 
 @user_bp.route('/library/add', methods = ['POST'])
@@ -40,13 +50,8 @@ def remove_from_library():
     manga_id = keys[0]
 
     row = UserLibrary.query.filter_by(user_id=current_user.id, manga_id=manga_id).first()
-    print(row)
-    with current_app.app_context():
-        try:        
-            db.session.delete(row)
-            db.session.commit()
-        except Exception as e:
-            print(e)
-            db.session.rollback()
-            db.session.remove()
+    print(row)         
+    db.session.delete(row)
+    db.session.commit()
+
     return redirect(url_for('user.library_view'))

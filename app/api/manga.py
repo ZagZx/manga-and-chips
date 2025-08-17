@@ -10,6 +10,10 @@ from typing import Union
 class Manga:
     BASE_URL = 'https://api.mangadex.org'
     BASE_UPLOADS_URL = 'https://uploads.mangadex.org'
+    DEFAULT_PAYLOAD = {
+        'includes[]': 'cover_art',
+        'contentRating[]': ['safe', 'suggestive'],
+    }
     
 
     def __init__(self, id:str):
@@ -36,7 +40,8 @@ class Manga:
     def manga_data(self) -> dict:
         if not self._manga_data:
             try:
-                response = requests.get(f'{self.BASE_URL}/manga/{self.id}')
+                payload = self.DEFAULT_PAYLOAD
+                response = requests.get(f'{self.BASE_URL}/manga/{self.id}', params=payload)
                 self._manga_data = response.json()['data']
             except Exception as e:
                 print(f'Erro ao buscar os dados do mangá: {e}')

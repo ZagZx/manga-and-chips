@@ -6,9 +6,9 @@ Minha Biblioteca
 
 {% block main %}
     <form action="{{ url_for('user.remove_from_library') }}" method="post">
-    {% for manga_id in library_list %}
-        <button name="{{ manga_id }}">Remover</button>
-        <img width="112" height="160" src="{{ url_for('proxy.cover_by_manga_id', manga_id=manga_id) }}" alt="">
+    {% for manga in mangas %}
+        <button name="{{ manga['id'] }}">Remover</button>
+        <img width="112" height="160" src="{{ manga['cover_image'] }}" alt="">
         
         <p>{{ manga_id }}</p>
     {% endfor %}
