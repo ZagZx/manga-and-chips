@@ -28,6 +28,6 @@ def signup():
             
             return redirect(url_for('auth.login'))
         
-        return render_template('register.html')
+        return render_template('auth/signup.html')
     if request.method == 'GET':
-        return render_template('register.html')
+        return render_template('auth/signup.html')
