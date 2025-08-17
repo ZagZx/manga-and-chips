@@ -35,6 +35,14 @@ button:hover{
     cursor: pointer;
 }
 
+.error{
+    color: #ef4444;
+}
+
+.success{
+    color: #248d3b;
+}
+
 .break{
     height: 1px;
     background-color: #4b5563;

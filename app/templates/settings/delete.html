@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+Deletar conta
+{% endblock title %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/form-page.css') }}">
+{% endblock head %}
+
+{% block main %}
+<form action="{{ url_for('user.delete') }}" method="post">
+    <div class="form-card">
+        <h1>Deletar conta</h1>
+
+        <div class="input-container">
+            <label for="confirm-message">Digite <span class="link">"Tenho certeza"</span> se você quer mesmo deletar sua conta</label>
+            <input name="confirm-message" id="confirm-message" type="text" placeholder="Tenho certeza">
+        </div>
+
+        {% include "components/messages.html" %}
+
+        <button type="submit" class="button">Deletar</button>
+    </div>
+</form>
+{% endblock main %}

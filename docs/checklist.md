@@ -12,7 +12,7 @@
     - [x] Senha com hash seguro 
     - [x] Sessão ou Flask-Login para manter usuário autenticado 
 - [x] Logout funcional 
-- [ ] Templates com extends/includes para base e navbar
+- [x] Templates com extends/includes para base e navbar
 
 ### Semana 3 (18/07–24/07)
 - [ ] Implementar CRUD do recurso escolhido:

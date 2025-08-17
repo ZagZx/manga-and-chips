@@ -6,5 +6,5 @@ class UserLibrary(db.Model):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     manga_id = Column(String(255), nullable=False)
-    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     

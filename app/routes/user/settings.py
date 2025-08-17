@@ -1,7 +1,7 @@
-from flask import redirect, url_for, request, render_template
-from flask_login import login_required, current_user
+from flask import redirect, url_for, request, render_template, flash
+from flask_login import login_required, current_user, logout_user
 
-from app.models import UserSettings
+from app.models import User, UserSettings
 from app import db
 
 from . import user_bp
@@ -17,7 +17,7 @@ def settings():
         'pornographic':user_settings.pornographic
     }
 
-    return render_template('settings.html', filters=content_ratings)
+    return render_template('settings/settings.html', filters=content_ratings)
 
 @user_bp.route('/settings/update', methods = ['POST'])
 @login_required
@@ -39,3 +39,21 @@ def update_settings():
     db.session.commit()
 
     return redirect(url_for('index.index'))
+
+@user_bp.route('/settings/delete-account', methods = ['GET', 'POST'])
+@login_required
+def delete():
+    if request.method == 'POST':
+        confirm_message = request.form.get('confirm-message')
+
+        if confirm_message.lower() == 'tenho certeza':
+            user:User = User.query.get(current_user.id)
+            db.session.delete(user)
+            db.session.commit()
+
+            logout_user()
+
+            return redirect(url_for('index.index'))
+        else:
+            flash('Digite a mensagem informada', 'error')    
+    return render_template('settings/delete.html')
