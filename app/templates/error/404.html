@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}
+Página não encontrada
+{% endblock title %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/form-page.css') }}">
+{% endblock head %}
+
+{% block main %}
+<div style="text-align: center;">
+    <h1>Erro 404</h1>
+    <img src="{{ url_for('static', filename='assets/confused_monkey.png') }}" alt="">
+    <h1>Página não encontrada</h1>
+</div>
+{% endblock main %}

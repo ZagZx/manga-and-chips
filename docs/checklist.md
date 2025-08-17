@@ -15,10 +15,10 @@
 - [x] Templates com extends/includes para base e navbar
 
 ### Semana 3 (18/07–24/07)
-- [ ] Implementar CRUD do recurso escolhido:
+- [x] Implementar CRUD do recurso escolhido:
     - [x] Criar
     - [x] Listar
-    - [ ] Editar
+    - [x] Editar
     - [x] Excluir
 - [x] Restrição de acesso: cada usuário só pode ver/editar/excluir seus dados
 
@@ -27,8 +27,8 @@
     - [x] Uso de request para formulários/dados
     - [x] Uso de redirect e url_for 
     - [ ] Uso de make_response (exemplo: cookies ou headers customizados)
-- [ ] Tratamento de erros:
-    - [ ] Páginas personalizadas para 404 e 500
+- [x] Tratamento de erros:
+    - [x] Páginas personalizadas para 404 e 500
 
 ### Semana 5 (01/08–13/08)
 - [ ] Testes manuais completos
