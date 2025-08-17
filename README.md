@@ -1,3 +1,3 @@
-# romero-manga
+# Manga&Chips(quart) ~~Descontinuado~~
 
-Falta pensar em um nome pra essa bomba, não vai ser Romero Mangá não
+Versão do site utilizando quart (flask só que assíncrono)
