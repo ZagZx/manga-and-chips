@@ -15,7 +15,7 @@ Configurações
         
         <h1>Configurações de Usuário</h1>
 
-        <a class="button bg-blue" href="">Trocar senha</a>
+        <a class="button bg-blue" href="{{ url_for('user.change_password') }}">Trocar senha</a>
         <a class="button" href="{{ url_for('user.delete') }}">Deletar conta</a>
 
         <div class="break"></div>
