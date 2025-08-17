@@ -12,40 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="{{ url_for('static', filename='assets/book.ico') }}" type="image/x-icon">
 
-    <script>
-        function dropMenu(){
-            const menu = document.getElementById('menu-content')
-            const logo = document.getElementById('user-logo')
-            
-            if (menu.style.display == 'flex'){
-                menu.style.display = 'none'
-                logo.style.color = ''
-                console.log('virou none')
-            }
-            else{
-                menu.style.display = 'flex'
-                logo.style.color = '#ef4444'
-
-                console.log('virou flex')
-            }
-        }
-    </script>
-
-    <script>
-        function initMainHeight(){
-            const body = document.querySelector('body')
-            const header = document.querySelector('header')
-            const main = document.querySelector('main')
-            const footer = document.querySelector('footer')
-            
-            main.style.paddingTop = header.offsetHeight + 'px'
-            main.style.minHeight = body.offsetHeight + 'px'
-            main.style.paddingBottom = footer.offsetHeight + 'px'
-        }
-
-        document.addEventListener('DOMContentLoaded', initMainHeight)
-        window.addEventListener('resize', initMainHeight)
-    </script>
+    <script src="{{ url_for('static', filename='scripts/dropMenu.js') }}"></script>
 
     {% block head %}{% endblock head %}
 </head>
@@ -60,7 +27,7 @@
             
         <nav class="horizontal-nav">
             <a class="anchor-hover" href="{{ url_for('index.index') }}">Início</a>
-            <a class="anchor-hover" href="#">Biblioteca</a>
+            <a class="anchor-hover" href="{{ url_for('user.library_view') }}">Biblioteca</a>
             <a class="anchor-hover" href="#">Categorias</a>
 
         </nav>
@@ -76,9 +43,14 @@
             <div id="user-menu">
                 <i onclick="dropMenu()" id="user-logo" class="fas fa-user-circle anchor-hover"></i>
                 <div id="menu-content" class="vertical-nav">
-                    <a class="anchor-hover" href="{{ url_for('auth.login') }}">Login</a>
-                    <a class="anchor-hover" href="{{ url_for('auth.signup') }}">Cadastro</a>
-                    <a class="anchor-hover" href="{{ url_for('auth.logout') }}">Sair</a>
+                    {% if current_user.id %}
+                        <p style="border-bottom: 1px solid white; padding-bottom:0.5em">{{current_user.username}}</p>
+                        <a class="anchor-hover" href="{{ url_for('user.settings') }}">Configurações</a>
+                        <a class="anchor-hover" href="{{ url_for('auth.logout') }}">Sair</a>
+                    {% else %}
+                        <a class="anchor-hover" href="{{ url_for('auth.login') }}">Login</a>
+                        <a class="anchor-hover" href="{{ url_for('auth.signup') }}">Cadastro</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
@@ -91,7 +63,7 @@
     <footer>
         <a href="https://mangadex.org/" target="_blank">
             <div id="powered">
-                Powered by Mangadex
+                Powered by Mangadex API
                 <img style="width: 1.5em;" src="{{ url_for('static', filename='assets/mangadex.png') }}" alt="">
             </div>  
         </a>

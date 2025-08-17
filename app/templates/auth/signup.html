@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block title %}Cadastro{% endblock title %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/form-page.css') }}">
+
+{% endblock head %}
+
+{% block main %}
+<form action="{{ url_for('auth.signup') }}" method="post">
+    <div class="form-card">
+        <h1>Cadastrar-se</h1>
+
+        <div class="input-container">
+            <label for="username">Nome de usuário</label>
+            <input type="text" name="username" id="username" placeholder="John Doe">
+        </div>
+        <div class="input-container">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="john.doe@example.com">
+        </div>
+        
+        <div class="input-container">
+            <label for="password">Senha</label>
+            <input type="password" name="password" id="password" placeholder="*******">
+        </div>
+        
+        {% include "components/messages.html" %}
+        
+        <button class="button" type="submit">Cadastrar</button>
+
+        <div class="break"></div>
+
+        <span>Já possui uma conta? <a class="link" href="{{ url_for('auth.login') }}">Faça login</a></span>
+    </div>
+ </form>
+{% endblock main %}

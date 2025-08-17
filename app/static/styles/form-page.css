@@ -1,0 +1,51 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+
+    width: 400px;
+    background-color: #1f2937;
+    padding: 2em;
+    border: 1px solid #4b5563;
+    border-radius: 0.5em;
+}
+
+.form-card > *{
+    width: 100%;
+}
+
+.form-card span, .form-card h1{
+    text-align: center;
+}
+
+.form-card ::placeholder{
+    color: #9ca3af;
+}
+
+.input-container input{
+    background-color: #374151;
+    height: 3em;
+    outline: none;
+    border: 1px solid #4b5563;
+    border-radius: 0.7em;
+    padding: 0.5em;
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container:has(input:focus) input{
+    border-color: #ef4444;    
+}
+.input-container:has(input:focus) label{
+    color: #ef4444;
+}

@@ -10,6 +10,7 @@ from typing import Union
 class Manga:
     BASE_URL = 'https://api.mangadex.org'
     BASE_UPLOADS_URL = 'https://uploads.mangadex.org'
+    
 
     def __init__(self, id:str):
         self.id = id
@@ -18,6 +19,8 @@ class Manga:
     def _init_properties(self):
         'Função para organizar a inicialização das properties, definindo todas as variáveis necessárias como None, evitando a poluição do init'
         self._manga_data = {}
+        self._chapters_data = {}
+        self._cover_data = {}
 
         self._title = ''
         self._genres = []
@@ -28,7 +31,7 @@ class Manga:
         self._cover_filename = ''
         self._cover_image = None
 
-        self._chapters_data = {}    
+        
     @property
     def manga_data(self) -> dict:
         if not self._manga_data:
@@ -37,6 +40,10 @@ class Manga:
                 self._manga_data = response.json()['data']
             except Exception as e:
                 print(f'Erro ao buscar os dados do mangá: {e}')
+
+        # import json
+        # with open('./manga_data.json', 'w') as fw:
+        #     json.dump(self._manga_data,fw, indent=4)
         return self._manga_data
     @manga_data.setter
     def manga_data(self, data:dict):
@@ -93,19 +100,25 @@ class Manga:
         return self._translated_languages
 
     @property
+    def cover_data(self) -> dict:
+        if not self._cover_data:
+            try:
+                for relation in self.manga_data['relationships']: 
+                    if relation['type'] == 'cover_art':
+                        self._cover_data = relation
+                        break
+                if not self._cover_data:
+                    raise Exception('Dados da cover não encontrados')
+            except Exception as e:
+                print(f'Erro ao buscar os dados da cover: {e}')
+        # print(self._cover_data.keys())
+        return self._cover_data
+
+    @property
     def cover_id(self) -> str:
         if not self._cover_id:
             try:
-                if not self.manga_data:
-                    raise Exception('Não foi possível obter manga_data')
-                # vai pegar a primeira cover art que encontrar, tem alguma cover que seja melhor que outra?
-                for relation in self.manga_data['relationships']: 
-                    if relation['type'] == 'cover_art':
-                        self._cover_id = relation['id']
-                        break
-
-                if not self._cover_id:
-                    raise Exception('id não encontrado')
+                self._cover_id = self.cover_data['id']
             except Exception as e:
                 print(f'Erro ao buscar id da cover: {e}')
         return self._cover_id
@@ -114,12 +127,19 @@ class Manga:
     def cover_filename(self) -> str:
         if not self._cover_filename:
             try:
-                if not self.cover_id:
-                    raise Exception('Não foi possível obter o cover_id')
-                response = requests.get(f'{self.BASE_URL}/cover/{self.cover_id}')
-                self._cover_filename = response.json()['data']['attributes']['fileName']
+                # é possível fazer a busca do mangá já trazendo o filename da cover_art, como foi feito na função search_manga_by_title
+                # print(self.cover_data.keys())
+                self._cover_filename = self.cover_data['attributes']['fileName']
             except Exception as e:
-                print(f'Erro ao buscar o filename da cover: {e}')
+                print(f'Erro ao buscar o filename da cover via dicionário padrão: {e}')
+                print('Iniciando busca via request')
+                try:
+                    if not self.cover_id:
+                        raise Exception('Não foi possível obter o cover_id')
+                    response = requests.get(f'{self.BASE_URL}/cover/{self.cover_id}')
+                    self._cover_filename = response.json()['data']['attributes']['fileName']
+                except Exception as e:
+                    print(f'Erro ao buscar o filename da cover via request: {e}')
         return self._cover_filename
     
     @property
@@ -134,7 +154,7 @@ class Manga:
             except Exception as e:
                 print(f'Erro ao buscar a imagem da cover_art: {e}')
         return self._cover_image 
-    
+
     def get_chapters_data(self, language:str = 'pt-br') -> dict:
         if not self._chapters_data.get(language):
             try:
@@ -201,5 +221,5 @@ class Manga:
     
 if __name__ == '__main__':
     jojo = Manga('1044287a-73df-48d0-b0b2-5327f32dd651')
-    print(jojo.title)
-    print(jojo.get_chapter_athome_data(1))
+    print(jojo.cover_data)
+    # print(jojo.get_chapter_athome_data(1))

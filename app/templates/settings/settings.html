@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}
+Configurações
+{% endblock title %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/form-page.css') }}">
+{% endblock head %}
+
+{% block main %}    
+<form action="{{ url_for('user.update_settings') }}" method="post">
+    <div class="form-card">
+        
+        <h1>Configurações de Usuário</h1>
+
+        <a class="button bg-blue" href="{{ url_for('user.change_password') }}">Trocar senha</a>
+        <a class="button" href="{{ url_for('user.delete') }}">Deletar conta</a>
+
+        <div class="break"></div>
+
+        <h3>Filtro de conteúdo:</h3>
+
+        <div>
+            <input {% if filters['safe'] %}checked{% endif %} type="checkbox" name="safe" id="safe">
+            <label for="safe">Seguro</label>
+        </div>
+
+        <div>
+            <input {% if filters['suggestive'] %}checked{% endif %} type="checkbox" name="suggestive" id="suggestive">
+            <label for="suggestive">Sugestivo / Violento</label>
+        </div>
+
+        <div>
+            <input {% if filters['erotica'] %}checked{% endif %} type="checkbox" name="erotica" id="erotica">
+            <label for="erotica">Erótico</label>
+        </div>
+
+        <div>
+            <input {% if filters['pornographic'] %}checked{% endif %} type="checkbox" name="pornographic" id="pornographic">
+            <label for="pornographic">Pornográfico</label>
+        </div>
+
+        <div class="break"></div>
+
+        <button type="submit" class="button bg-green">Salvar</button>
+    </div>
+</form>
+{% endblock main %}

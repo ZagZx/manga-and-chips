@@ -5,37 +5,9 @@
     color: white;
 }
 
-a{
-    text-decoration: none;
-}
-
-header{
-    display: flex;
-    position: fixed;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1em 0;
-    background-color: #1f2937;
-}
-
-footer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    background-color: #1f2937;
-    padding: 3em;
-}
-
-footer .vertical-nav{
-    position: absolute;
-    right: 5em;
-}
-
 body{
+    display: flex;
+    flex-direction: column;
     position: relative;
     background-color: #111827;
     width: 100vw;
@@ -43,7 +15,60 @@ body{
 }
 
 main{
-    min-height: 80vh;
+    flex: 1;
+}
+
+label{
+    user-select: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 1em;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+.error{
+    color: #ef4444;
+}
+
+.success{
+    color: #248d3b;
+}
+
+.break{
+    height: 1px;
+    background-color: #4b5563;
+}
+
+.link{
+    color: #ef4444;
+}
+
+.button{
+    text-align: center;
+    background-color: #ef4444;
+    color: white;
+    font-weight: bold;
+    border-radius: 0.3em;
+    padding: 0.7em 0;
+}
+
+.bg-blue{
+    background-color: rgb(12, 66, 128);
+}
+
+.bg-green{
+    background-color: rgb(47, 116, 2);
 }
 
 .anchor-hover:hover{

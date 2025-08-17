@@ -2,6 +2,7 @@ from flask import redirect, url_for, Response
 from time import time
 
 from app.api import Manga
+from app.api import get_cover_image
 from . import proxy_bp
 
 
@@ -9,14 +10,15 @@ from . import proxy_bp
 def cover(manga_id:str, filename:str):
     before = time()
     
-    manga = Manga(manga_id)
+    # manga = Manga(manga_id)
 
     if filename and manga_id:
-        cover_image = manga.cover_image
+        cover_image = get_cover_image(manga_id, filename)
 
         now = time()
         print('\n====COVER PROXY====')
-        print(f'Mangá: {manga.title}')
+        print(manga_id)
+        # print(f'Mangá: {manga.title}')
         print(f'Tempo de Execução: {round(now-before,2)}s\n')
 
         return Response(cover_image.content, content_type=cover_image.headers['Content-Type'])

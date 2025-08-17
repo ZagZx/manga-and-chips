@@ -2,15 +2,20 @@
 
 {% block title %} {{ request.args.get('query') }} {% endblock title %}
 
-
 {% block main %}
+<form action="{{ url_for('user.add_to_library') }}" method="post">
+    <div class="container">
+        {% for manga in mangas_list %}
+        <div class="card">
+            <div>
+                <p>{{ manga['title'] }}</p> 
+                <button name="{{ manga['id'] }}" style="color: black;">Adicionar</button>
+                {# <a href=""><button style="color: black;">Ler</button></a> #}
+            </div>
 
-<div class="container">
-    {% for manga in mangas_list %}
-    <div class="card">
-        <img width="112" height="160" src="{{ manga['cover_image'] }}" alt="">
-        <span>{{ manga['title'] }}</span>
+            <img width="112" height="160" src="{{ manga['cover_image'] }}" alt="">
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</div>
+</form>
 {% endblock main %}

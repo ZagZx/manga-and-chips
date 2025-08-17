@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from dotenv import load_dotenv
@@ -40,17 +40,26 @@ def create_app(drop_tables:bool = False):
     def load_user(user_id):
         return User.query.get(user_id)
 
+    @app.errorhandler(404)
+    def not_found_error(error):
+        return render_template('error/404.html')
+
+    @app.errorhandler(500)
+    def internal_error(error):
+        return render_template('error/500.html')
 
     from .routes.auth import auth_bp
     from .routes.manga import manga_bp
     from .routes.proxy import proxy_bp
     from .routes.index import index_bp
     from .routes.search import search_bp
-
+    from .routes.user import user_bp
+    
     app.register_blueprint(auth_bp)
     app.register_blueprint(manga_bp)
     app.register_blueprint(proxy_bp)
     app.register_blueprint(index_bp)
     app.register_blueprint(search_bp)
+    app.register_blueprint(user_bp)
 
     return app
