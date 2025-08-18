@@ -21,6 +21,4 @@ def login():
                 flash('Senha incorreta', 'error')
         else:
             flash('O usuário não está cadastrado', 'error')
-        return render_template('auth/login.html')
-    elif request.method == 'GET':
-        return render_template('auth/login.html')
+    return render_template('auth/login.html')
