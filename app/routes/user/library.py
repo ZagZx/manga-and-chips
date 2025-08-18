@@ -30,29 +30,25 @@ def library_view():
     
     return render_template('library.html', mangas=mangas)
 
-@user_bp.route('/library/add', methods = ['POST'])
+@user_bp.route('/library/add/<manga_id>', methods = ['POST'])
 @login_required
-def add_to_library():
-    print(request.form.keys())
-
-    keys = list(request.form.keys())
-    manga_id = keys[0]
-
-    with current_app.app_context():
-        db.session.add(UserLibrary(manga_id=manga_id, user_id=current_user.id))
-        db.session.commit()
+def add_to_library(manga_id):
+    db.session.add(UserLibrary(manga_id=manga_id, user_id=current_user.id))
+    db.session.commit()
         
+    last_page = request.referrer
+    if last_page:
+        return redirect(last_page)
     return redirect(url_for('user.library_view'))
 
-@user_bp.route('/library/remove', methods = ['POST'])
+@user_bp.route('/library/remove/<manga_id>', methods = ['POST'])
 @login_required
-def remove_from_library():
-    keys = list(request.form.keys())
-    manga_id = keys[0]
-
+def remove_from_library(manga_id):
     row = UserLibrary.query.filter_by(user_id=current_user.id, manga_id=manga_id).first()
-    print(row)         
     db.session.delete(row)
     db.session.commit()
 
+    last_page = request.referrer
+    if last_page:
+        return redirect(last_page)
     return redirect(url_for('user.library_view'))

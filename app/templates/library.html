@@ -12,7 +12,7 @@ Minha Biblioteca
 {% block main %}
 <div class="container">
     <h1>Biblioteca de {{ current_user.username}}</h1>
-    <form action="{{ url_for('user.remove_from_library') }}" method="post">
+    
         <div class="cards-container">
             {% for manga in mangas %}
             <div class="card">
@@ -21,11 +21,12 @@ Minha Biblioteca
                     <img width="140" height="200" src="{{ manga['cover_image'] }}" alt="">
                     <p>Em breve outras informações aqui</p>
                 </div>
-                <button class="button" name="{{ manga['id'] }}">Remover</button>
+                <form action="{{ url_for('user.remove_from_library', manga_id=manga['id']) }}" method="post">
+                    <button class="button" name="{{ manga['id'] }}">Remover</button>
+                </form>
             </div>
             {% endfor %}
         </div>
-    </form>
 </div>
 
     

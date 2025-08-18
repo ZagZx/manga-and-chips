@@ -11,7 +11,7 @@
 {% block main %}
 <div class="container">
     <h1>Pesquisa por: {{request.args.get('query')}}</h1>
-    <form action="{{ url_for('user.add_to_library') }}" method="post"></form>
+
         {% for manga in mangas_list %}
         <div class="card">
             <div class="manga-info">
@@ -22,12 +22,23 @@
                 </div>
 
             </div>
-            <div>
-                <button class="button" name="{{ manga['id'] }}">Adicionar</button>
-                {# <a href=""><button style="color: black;">Ler</button></a> #}
-            </div>
+
+            {% if manga['id'] in library %}
+                <form action="{{ url_for('user.remove_from_library', manga_id=manga['id']) }}" method="post">
+                    <div>
+                        <button class="button">Remover</button>
+                        {# <a href=""><button style="color: black;">Ler</button></a> #}
+                    </div>
+                </form> 
+            {% else %}
+                <form action="{{ url_for('user.add_to_library', manga_id=manga['id']) }}" method="post">
+                    <div>
+                        <button class="button">Adicionar</button>
+                        {# <a href=""><button style="color: black;">Ler</button></a> #}
+                    </div>
+                </form> 
+            {% endif %}
         </div>
         {% endfor %}
-    </form>
 </div>
 {% endblock main %}
