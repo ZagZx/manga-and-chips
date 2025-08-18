@@ -1,6 +1,10 @@
-/* form{
-    height: 100%;
-} */
+form{
+    width: 100%;
+}
+
+form button{
+    width: 100%;
+}
 
 .cards-container{
     justify-content:center;
