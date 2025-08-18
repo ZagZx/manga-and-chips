@@ -2,20 +2,32 @@
 
 {% block title %} {{ request.args.get('query') }} {% endblock title %}
 
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/card-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/search.css') }}">
+{% endblock head %}
+
 {% block main %}
-<form action="{{ url_for('user.add_to_library') }}" method="post">
-    <div class="container">
+<div class="container">
+    <h1>Pesquisa por: {{request.args.get('query')}}</h1>
+    <form action="{{ url_for('user.add_to_library') }}" method="post"></form>
         {% for manga in mangas_list %}
         <div class="card">
+            <div class="manga-info">
+                <img width="140" height="200" src="{{ manga['cover_image'] }}" alt="">
+                <div>
+                    <span title="{{ manga['title'] }}">{{ manga['title'] }}</span> 
+                    <p>Em breve outras informações do mangá aqui</p>
+                </div>
+
+            </div>
             <div>
-                <p>{{ manga['title'] }}</p> 
-                <button name="{{ manga['id'] }}">Adicionar</button>
+                <button class="button" name="{{ manga['id'] }}">Adicionar</button>
                 {# <a href=""><button style="color: black;">Ler</button></a> #}
             </div>
-
-            <img width="112" height="160" src="{{ manga['cover_image'] }}" alt="">
         </div>
         {% endfor %}
-    </div>
-</form>
+    </form>
+</div>
 {% endblock main %}
