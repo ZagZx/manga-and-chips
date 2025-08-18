@@ -4,13 +4,28 @@
 Minha Biblioteca
 {% endblock title %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/library.css') }}">
+{% endblock head %}
+
 {% block main %}
+<div class="container">
+    <h1>Biblioteca de {{ current_user.username}}</h1>
     <form action="{{ url_for('user.remove_from_library') }}" method="post">
-    {% for manga in mangas %}
-        <button name="{{ manga['id'] }}">Remover</button>
-        <img width="112" height="160" src="{{ manga['cover_image'] }}" alt="">
-        
-        <p>{{ manga_id }}</p>
-    {% endfor %}
+        <div class="cards-container">
+            {% for manga in mangas %}
+            <div class="card">
+                <span title="{{ manga['title'] }}">{{ manga['title'] }}</span>
+                <div class="manga-info">
+                    <img width="140" height="200" src="{{ manga['cover_image'] }}" alt="">
+                    <p>Em breve outras informações aqui</p>
+                </div>
+                <button class="button" name="{{ manga['id'] }}">Remover</button>
+            </div>
+            {% endfor %}
+        </div>
     </form>
+</div>
+
+    
 {% endblock main %}

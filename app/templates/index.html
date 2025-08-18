@@ -2,7 +2,26 @@
 
 
 {% block main %}
-<div class="card-container">
-    
-</div>
+<h1>Observações</h1>
+<p>O filtro de conteúdos de usuário ainda não é funcional, as configurações apenas são adicionadas no banco e exibidas na página de configurações do usuário, mas por padrão só é possível pesquisar por mangás seguros e sugestivos</p>
+<p>Se alguma rota travar por muito tempo tente recarregar a página</p>
+<br>
+
+<h1>Como usar o site</h1>
+<p>No menu à direita da barra de pesquisa é possível cadastrar e logar usuário, caso já esteja logado é possível ver as configurações do usuário para filtros de conteúdo,
+ trocar senha e deletar conta
+</p>
+<br>
+<p>É possível pesquisar um mangá por nome na barra de pesquisa e adicioná-lo a biblioteca(se estiver logado)</p>
+<br>
+<p>Acessando a página de biblioteca é possível visualizar e remover os mangás que foram adicionados anteriormente</p>
+
+<br>
+<h1>Em breve</h1>
+<p>Otimização de como a biblioteca funciona | <span class="link">quanto mais mangás são adicionados a biblioteca mais lenta a página fica pois toda vez que for carregar faz a requisição de cada mangá na API e só então carrega a página, será implementado um lazy loading</span></p>
+<p>Filtros funcionais</p>
+<p>Pesquisa de mangás por categoria</p>
+<p>Paginação nas pesquisas</p>
+<p>Leitura de mangás | <a class="link" href="/manga/1044287a-73df-48d0-b0b2-5327f32dd651/chapter/1">LINK PARA PROTÓTIPO</a></p>
+<p>Página com todas as informações do mangá</p>
 {% endblock main %}

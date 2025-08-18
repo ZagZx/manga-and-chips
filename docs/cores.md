@@ -12,3 +12,4 @@
 
 ## Bordas
 - input e forms: #4b5563
+- containers: #374151

@@ -15,7 +15,9 @@ def library_view():
     
     mangas = []
 
-    # trava a rota pois faz a requisição do manga_data de todos os mangás ao chamar o manga.title
+    # isso trava a rota porque toda vez que chama o manga.title
+    # solução: enviar apenas o ID do mangá para o HTML, e lá, ter um url_for para uma rota que pega os dados do mangá 
+    # fazer um lazy loading com javascript
     for row in library:
         
         manga = Manga(row.manga_id) 
@@ -27,7 +29,6 @@ def library_view():
         })
     
     return render_template('library.html', mangas=mangas)
-
 
 @user_bp.route('/library/add', methods = ['POST'])
 @login_required
