@@ -1,4 +1,5 @@
 # manga-and-chips
+Este site foi feito utilizando a API do MangaDex, todas as artes, páginas e dados dos mangás são tirados de lá.
 
 ## Dependências
 - Python
