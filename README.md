@@ -16,6 +16,10 @@ Para rodar a aplicação pela primeira vez, antes é necessário preparar o ambi
      ```bash
      python3 build.py
      ```
+  - **Ativando a virtual environment:**
+     ```bash
+     source venv/bin/activate
+     ```
   - **Iniciando o servidor:**
      ```bash
      flask run
@@ -29,16 +33,23 @@ Para rodar a aplicação pela primeira vez, antes é necessário preparar o ambi
      ```bash
      py build.py
      ```
+     
      ou
+    
      ```bash
      python build.py
      ```
-    
+  - **Ativando a virtual environment:**
+     ```bash
+     .\venv\Scripts\activate
+     ```
   - **Iniciando o servidor:**
      ```bash
      flask run
      ```
 </details>
+
+Após iniciar o servidor, é possível acessar o site pela URL http://127.0.0.1:5000 ou http://localhost:5000
 
 ## Imagens
 
