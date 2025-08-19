@@ -39,3 +39,7 @@ Para rodar a aplicação pela primeira vez, antes é necessário preparar o ambi
      flask run
      ```
 </details>
+
+![alt text](images/library.png)
+
+![alt text](images/search.png)
