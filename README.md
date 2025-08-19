@@ -40,6 +40,8 @@ Para rodar a aplicação pela primeira vez, antes é necessário preparar o ambi
      ```
 </details>
 
-![alt text](images/library.png)
+## Imagens
 
 ![alt text](images/search.png)
+![alt text](images/library.png)
+
