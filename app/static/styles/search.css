@@ -1,0 +1,27 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    width: 100%;
+    background-color: #374151;
+    border-radius: 0.5em;
+    border: 1px solid #4b5563;
+    padding: 1em;
+}
+
+.manga-info{
+    display: flex;
+    gap: 0.5em;
+}
+
+.manga-info p{
+    color: #ef4444;
+}
+
+form{
+    width: 100%;
+}
+
+.card button{ 
+    width: 140px;
+}

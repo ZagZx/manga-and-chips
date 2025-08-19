@@ -4,13 +4,30 @@
 Minha Biblioteca
 {% endblock title %}
 
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/card-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/library.css') }}">
+{% endblock head %}
+
 {% block main %}
-    <form action="{{ url_for('user.remove_from_library') }}" method="post">
-    {% for manga_id in library_list %}
-        <button name="{{ manga_id }}">Remover</button>
-        <img width="112" height="160" src="{{ url_for('proxy.cover_by_manga_id', manga_id=manga_id) }}" alt="">
-        
-        <p>{{ manga_id }}</p>
-    {% endfor %}
-    </form>
+<div class="container">
+    <h1>Biblioteca de {{ current_user.username}}</h1>
+    
+        <div class="cards-container">
+            {% for manga in mangas %}
+            <div class="card">
+                <span title="{{ manga['title'] }}">{{ manga['title'] }}</span>
+                <div class="manga-info">
+                    <img width="140" height="200" src="{{ manga['cover_image'] }}" alt="">
+                    <p>Em breve outras informações aqui</p>
+                </div>
+                <form action="{{ url_for('user.remove_from_library', manga_id=manga['id']) }}" method="post">
+                    <button class="button" name="{{ manga['id'] }}">Remover</button>
+                </form>
+            </div>
+            {% endfor %}
+        </div>
+</div>
+
+    
 {% endblock main %}

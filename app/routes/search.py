@@ -1,5 +1,9 @@
 from flask import url_for, render_template, request, Blueprint
+from flask_login import current_user
+
 from app.api import search_manga_by_title, Manga
+from app.models import UserLibrary
+
 
 search_bp = Blueprint('search', __name__)
 
@@ -30,5 +34,12 @@ def search():
                 "cover_image": url_for('proxy.cover', manga_id = manga.id, filename=manga.cover_filename)
             }
         )
+    
+    library = []
+    if current_user.is_authenticated:
+        user_library:list[UserLibrary] = UserLibrary.query.filter_by(user_id=current_user.id).all()
+        for manga in user_library:
+            library.append(manga.manga_id)
+        
 
-    return render_template('search.html', mangas_list = mangas_list)
+    return render_template('search.html', mangas_list = mangas_list, library=library)

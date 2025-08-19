@@ -31,11 +31,11 @@
     - [x] Páginas personalizadas para 404 e 500
 
 ### Semana 5 (01/08–13/08)
-- [ ] Testes manuais completos
-- [ ] Estilização básica com CSS ou Bootstrap
-- [ ] Ajustes finais no código
-- [ ] README bem elaborado:
-    - [ ] Instruções para rodar localmente
-    - [ ] Dependências
-    - [ ] Screenshots ou gifs opcionais
-- [ ] Revisão final e entrega no GitHub
+- [x] Testes manuais completos
+- [x] Estilização básica com CSS ou Bootstrap
+- [x] Ajustes finais no código
+- [x] README bem elaborado:
+    - [x] Instruções para rodar localmente
+    - [x] Dependências
+    - [x] Screenshots ou gifs opcionais
+- [x] Revisão final e entrega no GitHub

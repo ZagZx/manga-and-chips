@@ -3,6 +3,7 @@ from flask_login import login_required, current_user
 
 from app.models import UserLibrary
 from app import db
+from app.api import Manga
 
 from . import user_bp
 
@@ -12,41 +13,42 @@ from . import user_bp
 def library_view():
     library:list[UserLibrary] = UserLibrary.query.filter_by(user_id=current_user.id).all()
     
-    library_list = []
+    mangas = []
+
+    # isso trava a rota porque toda vez que chama o manga.title
+    # solução: enviar apenas o ID do mangá para o HTML, e lá, ter um url_for para uma rota que pega os dados do mangá 
+    # fazer um lazy loading com javascript
     for row in library:
-        library_list.append(row.manga_id)
-    
-    return render_template('library.html', library_list=library_list)
-
-
-@user_bp.route('/library/add', methods = ['POST'])
-@login_required
-def add_to_library():
-    print(request.form.keys())
-
-    keys = list(request.form.keys())
-    manga_id = keys[0]
-
-    with current_app.app_context():
-        db.session.add(UserLibrary(manga_id=manga_id, user_id=current_user.id))
-        db.session.commit()
         
+        manga = Manga(row.manga_id) 
+
+        mangas.append({
+            'id':manga.id,
+            'title':manga.title,
+            'cover_image': url_for('proxy.cover', manga_id=manga.id, filename=manga.cover_filename)
+        })
+    
+    return render_template('library.html', mangas=mangas)
+
+@user_bp.route('/library/add/<manga_id>', methods = ['POST'])
+@login_required
+def add_to_library(manga_id):
+    db.session.add(UserLibrary(manga_id=manga_id, user_id=current_user.id))
+    db.session.commit()
+        
+    last_page = request.referrer
+    if last_page:
+        return redirect(last_page)
     return redirect(url_for('user.library_view'))
 
-@user_bp.route('/library/remove', methods = ['POST'])
+@user_bp.route('/library/remove/<manga_id>', methods = ['POST'])
 @login_required
-def remove_from_library():
-    keys = list(request.form.keys())
-    manga_id = keys[0]
-
+def remove_from_library(manga_id):
     row = UserLibrary.query.filter_by(user_id=current_user.id, manga_id=manga_id).first()
-    print(row)
-    with current_app.app_context():
-        try:        
-            db.session.delete(row)
-            db.session.commit()
-        except Exception as e:
-            print(e)
-            db.session.rollback()
-            db.session.remove()
+    db.session.delete(row)
+    db.session.commit()
+
+    last_page = request.referrer
+    if last_page:
+        return redirect(last_page)
     return redirect(url_for('user.library_view'))

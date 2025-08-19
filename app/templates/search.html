@@ -2,20 +2,43 @@
 
 {% block title %} {{ request.args.get('query') }} {% endblock title %}
 
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/card-page.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/search.css') }}">
+{% endblock head %}
+
 {% block main %}
-<form action="{{ url_for('user.add_to_library') }}" method="post">
-    <div class="container">
+<div class="container">
+    <h1>Pesquisa por: {{request.args.get('query')}}</h1>
+
         {% for manga in mangas_list %}
         <div class="card">
-            <div>
-                <p>{{ manga['title'] }}</p> 
-                <button name="{{ manga['id'] }}" style="color: black;">Adicionar</button>
-                {# <a href=""><button style="color: black;">Ler</button></a> #}
+            <div class="manga-info">
+                <img width="140" height="200" src="{{ manga['cover_image'] }}" alt="">
+                <div>
+                    <span title="{{ manga['title'] }}">{{ manga['title'] }}</span> 
+                    <p>Em breve outras informações do mangá aqui</p>
+                </div>
+
             </div>
 
-            <img width="112" height="160" src="{{ manga['cover_image'] }}" alt="">
+            {% if manga['id'] in library %}
+                <form action="{{ url_for('user.remove_from_library', manga_id=manga['id']) }}" method="post">
+                    <div>
+                        <button class="button">Remover</button>
+                        {# <a href=""><button style="color: black;">Ler</button></a> #}
+                    </div>
+                </form> 
+            {% else %}
+                <form action="{{ url_for('user.add_to_library', manga_id=manga['id']) }}" method="post">
+                    <div>
+                        <button class="button">Adicionar</button>
+                        {# <a href=""><button style="color: black;">Ler</button></a> #}
+                    </div>
+                </form> 
+            {% endif %}
         </div>
         {% endfor %}
-    </div>
-</form>
+</div>
 {% endblock main %}
