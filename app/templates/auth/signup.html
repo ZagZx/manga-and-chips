@@ -15,16 +15,16 @@
 
         <div class="input-container">
             <label for="username">Nome de usuário</label>
-            <input type="text" name="username" id="username" placeholder="John Doe">
+            <input type="text" name="username" id="username" placeholder="John Doe" required>
         </div>
         <div class="input-container">
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" placeholder="john.doe@example.com">
+            <input type="email" name="email" id="email" placeholder="john.doe@example.com" required>
         </div>
         
         <div class="input-container">
             <label for="password">Senha</label>
-            <input type="password" name="password" id="password" placeholder="*******">
+            <input type="password" name="password" id="password" placeholder="*******" required>
         </div>
         
         {% include "components/messages.html" %}
