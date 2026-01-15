@@ -5,8 +5,9 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="w-50 h-50 flex flex-column bg-black">
-        <Button>Oi</Button>
+      <div className="w-50 h-50 flex flex-col bg-black gap-3">
+        <Button>Primário</Button>
+        <Button style="secondary">Secundário</Button>
       </div>
     </>
   );
