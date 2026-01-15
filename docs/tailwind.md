@@ -1,0 +1,1 @@
+https://www.subframe.com/blog/how-to-setup-semantic-tailwind-colors#2-add-your-colors-to-tailwind-config
