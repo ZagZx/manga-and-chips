@@ -1,17 +1,21 @@
 import { faBookOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Link from "next/link";
+import clsx from "clsx";
+import NavbarLink from "./NavbarLink";
+import Icon from "./Icon";
 
 export default function Header() {
   return (
-    <header className="bg-big-stone-950">
-      <div className="flex align-middle justify-center">
-        <FontAwesomeIcon icon={faBookOpen} className="text-red-500 w-6" />
-        <span>
-          Manga
-          <span className="text-red-500">&</span>
-          Chips
-        </span>
-      </div>
+    <header className="bg-skeleton flex justify-around py-4 shadow-xl">
+      <Link href="/">
+        <Icon />
+      </Link>
+      <nav className="flex gap-3">
+        <NavbarLink href="/">Início</NavbarLink>
+        <NavbarLink href="#">Biblioteca</NavbarLink>
+        <NavbarLink href="#">Categorias</NavbarLink>
+      </nav>
     </header>
   );
 }
