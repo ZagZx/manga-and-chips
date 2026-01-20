@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import { Url } from "next/dist/shared/lib/router/router";
 import { HTMLAttributeAnchorTarget, ReactNode } from "react";
