@@ -16,7 +16,7 @@ export default function Button({ children, style="primary", extraClassNames  }: 
       "rounded py-2",
       "font-bold",
       "border-2",
-      style === "primary" ? ("bg-primary hover:bg-primary-hover text-secondary border-transparent") : null,
+      style === "primary" ? ("bg-primary hover:bg-primary-hover text-secondary border-transparent") : 
       style === "secondary" ? ("bg-secondary hover:bg-secondary-hover text-primary border-primary  hover:border-primary-hover") : null,
       extraClassNames,
       )}
