@@ -19,7 +19,7 @@ export default function NavbarLink({children, href, target, extraClassNames}: Na
   return (
     <Link href={href} 
       className={clsx(
-        "hover:text-text-primary-hover",
+        "hover:text-primary",
         "transition delay-50",
         "flex gap-1",
         // pathname === href ? "text-text-primary-hover": "",

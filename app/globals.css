@@ -11,10 +11,10 @@
 
   --color-skeleton: hsl(215, 28%, 17%);
 
-  --color-text-primary: hsl(0, 0%, 100%);
-  --color-text-primary-hover: var(--color-primary);
+  --color-txt-primary: hsl(0, 0%, 100%);
+  /* --color-text-primary-hover: var(--color-primary); */
 
-  --color-text-secondary: hsl(0, 0%, 80%);
+  --color-txt-secondary: hsl(0, 0%, 80%);
 
   
 }
@@ -41,7 +41,6 @@
 
 body {
   background-color: var(--color-background);
-  color: var(--color-text-primary);
+  color: var(--color-txt-primary);
   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* font-family: "Times New Roman", Times, serif; */
 }

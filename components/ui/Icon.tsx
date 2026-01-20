@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default function Icon() {
   return(
     <div className="flex gap-1 text-lg align-middle justify-center font-bold">
-      <FontAwesomeIcon icon={faBookOpen} className="text-primary w-6" />
+      <FontAwesomeIcon icon={faBookOpen} className="text-primary w-7" />
       <span>
         Manga
         <span className="text-primary">&</span>
