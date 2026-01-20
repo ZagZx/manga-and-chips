@@ -13,7 +13,7 @@ export default function Header() {
   const [menuStatus, setMenuStatus] = useState<MenuStatus>("closed");
 
   return (
-    <header className="bg-skeleton flex justify-around py-4 shadow-xl">
+    <header className="bg-skeleton flex justify-around items-center py-4 shadow-xl">
       <Link href="/">
         <Icon />
       </Link>
