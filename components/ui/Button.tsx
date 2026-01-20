@@ -1,5 +1,5 @@
 import clsx, { ClassValue } from "clsx";
-import React, { ButtonHTMLAttributes, ReactNode } from "react";
+import { ReactNode } from "react";
 
 type ButtonStyle = "primary" | "secondary"
 
