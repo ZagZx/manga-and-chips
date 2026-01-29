@@ -15,9 +15,11 @@ print('Iniciando Build')
 dotenv_path = './.env'
 if not os.path.exists(dotenv_path):
     secret_key = token_hex()
+    database_url = "sqlite:///database.db"
 
     with open(dotenv_path, 'w') as fw:
         fw.write(f'SECRET_KEY="{secret_key}"\n')
+        fw.write(f'DATABASE_URL="{database_url}"')
     beauty_print(f'Arquivo .env criado | 1/{STEPS}')
 else:
     beauty_print(f'Arquivo .env já existe | 1/{STEPS}')
