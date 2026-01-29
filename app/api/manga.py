@@ -215,7 +215,7 @@ class Manga:
         athome_data = {}
         try:
             chapter = self.get_chapter_data(chapter_number, language)
-            url = f'{self.BASE_URL}/at-home/server/{chapter['id']}'
+            url = f'{self.BASE_URL}/at-home/server/{chapter["id"]}'
             
             response = requests.get(url)        
             athome_data = response.json()
