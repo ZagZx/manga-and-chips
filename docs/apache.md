@@ -1,6 +1,9 @@
 # ajuda
 https://medium.com/@farhanahmedindia/complete-guide-deploying-a-flask-app-on-apache-ubuntu-c2f5d7b17e20
 
+# instalar
+sudo apt-get install libapache2-mod-wsgi-py3
+
 # manga-and-chips.conf
 
 <VirtualHost *:80>
